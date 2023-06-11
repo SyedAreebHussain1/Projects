@@ -11,6 +11,7 @@ import ParallaxComponent from "./components/Parallax/Parallax";
 import Technologies from "./components/Technologies/Technologies";
 import Playground from "./components/Playground/Playground";
 import ContactUs from "./components/Contactus/ContactUs";
+import Querys from "./components/Querys/querys";
 
 function App() {
   // console.log(
@@ -29,6 +30,7 @@ function App() {
           <Navbar />
           <Home />
           {/* <Projects /> */}
+          <Querys />
           <About />
           <ContactUs />
           <ParallaxComponent />
