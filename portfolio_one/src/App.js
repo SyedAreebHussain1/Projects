@@ -30,9 +30,10 @@ function App() {
           <Navbar />
           <Home />
           {/* <Projects /> */}
-          <Querys />
           <About />
           <ContactUs />
+          <Querys />
+
           <ParallaxComponent />
           <Technologies />
           {/* <Playground /> */}
