@@ -13,6 +13,7 @@ const Querys = () => {
             // console.log('snapshot',snapshot)
             if (snapshot.exists()) {
                 const data = snapshot.val();
+                setKeys([])
                 setGetQuery(data)
             } else {
                 console.log('runin else')
@@ -20,13 +21,12 @@ const Querys = () => {
         } catch (error) {
             console.log('error', error)
         }
-
     }, []);
     useEffect(() => {
         for (const property in getQuery) {
-            keys.push(getQuery[property])
-        }
-    }, [getQuery,keys])
+            setKeys(prev => [...prev, getQuery[property]])
+        } 
+    }, [getQuery])
 
     return (
         <table id="customers">
@@ -37,7 +37,6 @@ const Querys = () => {
                 <th>Query</th>
             </tr>
             <tbody> {keys?.map((item, i) => {
-                console.log(item.data);
                 return <tr key={i}>
                     <td>{item?.data?.name}</td>
                     <td>{item?.data?.email}</td>
