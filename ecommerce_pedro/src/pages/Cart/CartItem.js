@@ -1,23 +1,28 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../../context/shop-context'
 
-const CartItem = ({data}) => {
-    const { removeFromCart, cartItems } = useContext(ShopContext)
+const CartItem = ({ data }) => {
+  const { id, productName, price, productImage } = data;
+  const { cartItems, addToCart, removeFromCart, updateCartItemCount } = useContext(ShopContext)
 
   return (
-    // <div className='cartItem'>CartItem</div>
-    <div className='product'>
-            <img src={data?.productImage} alt='' />
-            <div className='description'>
-                <p><b>{data?.productName}</b>  </p>
-                <p>${data?.price}</p>
-            </div>
-
-            <button className="addToCartBttn" onClick={() => removeFromCart(data.id)}>
-                Add To Cart
-                {/* {cartItemCount > 0 && <> ({cartItemCount})</>} */}
-            </button>
+    <div className="cartItem">
+      <img src={productImage} />
+      <div className="description">
+        <p>
+          <b>{productName}</b>
+        </p>
+        <p> Price: ${price}</p>
+        <div className="countHandler">
+          <button onClick={() => removeFromCart(id)}> - </button>
+          <input
+            value={cartItems[id]}
+            onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
+          />
+          <button onClick={() => addToCart(id)}> + </button>
         </div>
+      </div>
+    </div>
   )
 }
 
