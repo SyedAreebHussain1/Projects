@@ -12,18 +12,19 @@
   }
   
   .product {
+    display: flex;
+    /* flex-wrap: wrap; */
     border-radius: 15px;
-    width: 300px;
+    /* width: 300px; */
     height: 350px;
     margin: 100px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   
   .product img {
-    width: 400px;
+    width:200px;
   }
   
   .product .description {
