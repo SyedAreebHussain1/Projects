@@ -10,7 +10,6 @@ export const AppContext = createContext()
 function App() {
   const [board, setBoard] = useState(boardDefault)
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letterPos: 0 })
-  console.log('currAttempt',currAttempt)
   return (
     <div className="App">
       <nav>
