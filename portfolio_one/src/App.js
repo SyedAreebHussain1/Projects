@@ -1,4 +1,6 @@
+import axios from "axios";
 import About from "./components/About/About";
+
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
@@ -14,14 +16,7 @@ import ContactUs from "./components/Contactus/ContactUs";
 import Querys from "./components/Querys/querys";
 
 function App() {
-  // console.log(
-  //   "%cThank you for checking up of my portfolio. Wishing you the best for every step in your journey!🎉",
-  //   "color: white; font-weight: 500; font-size:16px"
-  // );
-  // console.log(
-  //   "%cYou can check the code here https://github.com/monciego/portfolio",
-  //   "color: white; font-weight: 500; font-size:16px"
-  // );
+  axios.defaults.baseURL = "https://online-website-34c0c-default-rtdb.asia-southeast1.firebasedatabase.app/";
   return (
     <Router>
       <ThemeProvider theme={theme}>
@@ -32,7 +27,7 @@ function App() {
           {/* <Projects /> */}
           <About />
           <ContactUs />
-          <Querys />
+          {/* <Querys /> */}
 
           <ParallaxComponent />
           <Technologies />

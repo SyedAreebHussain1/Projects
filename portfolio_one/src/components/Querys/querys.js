@@ -10,7 +10,6 @@ const Querys = () => {
         try {
             const dbRef = ref(database, '/query');
             const snapshot = await get(dbRef);
-            // console.log('snapshot',snapshot)
             if (snapshot.exists()) {
                 const data = snapshot.val();
                 setKeys([])

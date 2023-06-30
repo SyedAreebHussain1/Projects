@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import { contactUsApi } from '../../redux/api/contactus'
+import { useDispatch, useSelector } from 'react-redux'
 import './Contactus.css'
 
 const ContactUs = () => {
+    const dispatch = useDispatch()
+    const contactUsSlice = useSelector((state) => state.contactUsSlice)
+    // console.log(contactUsSlice)
     var phoneno = /^\d{11}$/
     const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     const [response, setResponse] = useState({
@@ -22,25 +26,7 @@ const ContactUs = () => {
         if (state.name !== null && state.email !== null && state.phoneNo !== null && state.message) {
             if (state.phoneNo.match(phoneno) && emailValidation.test(state.email)) {
                 setLoading(true)
-                try {
-                    const res = await axios.post('https://online-website-34c0c-default-rtdb.asia-southeast1.firebasedatabase.app/query.json', data)
-                    if (res?.statusText) {
-                        setLoading(false)
-                        setResponse({
-                            msg: "Successfully submit",
-                            color: "green"
-                        })
-                    }
-                    setState({
-                        name: '',
-                        email: '',
-                        phoneNo: '',
-                        message: ''
-                    })
-
-                } catch (e) {
-                    // console.log('e', e)
-                }
+                contactUsApi(dispatch, data, onSuccess,onFailure)
             } else {
                 setResponse({
                     msg: !emailValidation.test(state.email) ? 'You have entered an invalid email address!' : '' ? phoneno.test(state.phoneNo) : 'Please Enter valid Phone Number',
@@ -54,20 +40,26 @@ const ContactUs = () => {
             })
         }
         setLoading(false)
-        // const { name, email, phoneNo, message } = state
-        // const res = await fetch("https://online-website-34c0c-default-rtdb.asia-southeast1.firebasedatabase.app/query.json",
-        //     {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify({
-        //             // name, email, phoneNo, message
-        //             state
-        //         })
-        //     })
     }
-
+    function onSuccess() {
+        setLoading(false)
+        setResponse({
+            msg: "Successfully Submit",
+            color: "green"
+        })
+        setState({
+            name: '',
+            email: '',
+            phoneNo: '',
+            message: ''
+        })
+    }
+    function onFailure (msg){
+        setResponse({
+            msg: msg,
+            color: "red"
+        })
+    }
     return (
         <div className="container">
             <div className="row">
@@ -104,27 +96,11 @@ const ContactUs = () => {
                         <label>Message</label>
                     </div>
                 </div>
-
                 <div className="col-xs-12">
-                    <div onClick={onSubmit} className="btn-lrg submit-btn" style={{ marginBottom: "10px" }}>Send Message</div>
-
+                    <div onClick={onSubmit} className="btn-lrg submit-btn" style={{ marginBottom: "10px" }}>Submit</div>
                 </div>
-
             </div>
-
-
-        </div >
-
-
-
-
-
-
-
-
-
-
-
+        </div>
     )
 }
 export default ContactUs
