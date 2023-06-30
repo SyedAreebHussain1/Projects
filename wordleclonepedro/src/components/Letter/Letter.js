@@ -1,8 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { AppContext } from '../../App.js'
 const Letter = ({ letterPos, attemptVal }) => {
-    const { board } = useContext(AppContext)
+    console.log(letterPos, attemptVal )
+    const { board, correctWord, currAttempt, setDisabledLetters } = useContext(AppContext)
     const letter = board?.[attemptVal]?.[letterPos]
-    return <div className='letter'>{letter ? letter : ''}</div>
+    const correct = correctWord.toUpperCase()?.[letterPos] === letter
+    const almost = !correct && letter !== "" && correctWord.includes(letter)
+    const letterState = currAttempt.attempt > attemptVal && (correct ? "correct" : almost ? "almost" : "error")
+    useEffect(() => {
+        if (letter !== "" && !correct && !almost) {
+            setDisabledLetters((prev) => [...prev, letter])
+        }
+    }, [currAttempt.attempt])
+    return <div className='letter' id={letterState}>{letter}</div>
 }
 export default Letter
