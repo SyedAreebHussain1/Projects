@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { userDelete } from '../features/userDetailSlice'
+import { updateUser, userDelete } from '../features/userDetailSlice'
 import CustomModal from './CustomModal'
 import { showUser } from '../features/userDetailSlice'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Read = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate();
     const { users, loading } = useSelector((state) => state?.app)
     const [id, setId] = useState()
     const [showPopup, setShowPopup] = useState(false)
 
-
+    // const handleEdit = (event) => { 
+    //     console.log(event);
+    //     navigate(`/update/${event.id}`);
+    //     // dispatch(updateUser(event?.id))
+    // }
     useEffect(() => {
         dispatch(showUser())
     }, [dispatch])
@@ -28,9 +34,9 @@ const Read = () => {
                         <h5 className="card-title">{item?.name}</h5>
                         <h6 className="card-subtitle mb-2 text-body-secondary">{item?.email}</h6>
                         <p className="card-text">{item?.gender}</p>
-                        <button className="card-link" onClick={() => [setId(item?.id), setShowPopup(true)]}>View</button>
-                        <a className="card-link">Edit</a>
-                        <button className="card-link" onClick={() => dispatch(userDelete(item?.id))}>Delete</button>
+                        <Link className="card-link" onClick={() => [setId(item?.id), setShowPopup(true)]}>View</Link>
+                        <Link className="card-link" to={`/update/${item.id}`} >Edit</Link>
+                        <Link className="card-link" onClick={() => dispatch(userDelete(item?.id))}>Delete</Link>
                     </div>
                 </div>
             })}
