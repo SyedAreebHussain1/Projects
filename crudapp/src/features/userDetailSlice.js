@@ -17,19 +17,20 @@ export const createUser = createAsyncThunk("createUser", async (data, { rejectWi
         return rejectWithValue(error)
     }
 })
+
+// get action 
 export const showUser = createAsyncThunk("showUser", async (args, { rejectWithValue }) => {
     const response = await fetch(`https://64a1de510079ce56e2db730e.mockapi.io/crud`)
     try {
         const result = await response.json()
-        // console.log('result', result)
         return result
     } catch (error) {
-        // console.log('error', error)
         return rejectWithValue(error)
     }
 })
+
+// delete action
 export const userDelete = createAsyncThunk("userDelete", async (id, { rejectWithValue }) => {
-    console.log(id)
     const response = await fetch(`https://64a1de510079ce56e2db730e.mockapi.io/crud/${id}`, {
         method: 'DELETE',
         headers: {
@@ -38,19 +39,46 @@ export const userDelete = createAsyncThunk("userDelete", async (id, { rejectWith
     })
     try {
         const result = await response.json()
-        console.log('result', result)
         return result
     } catch (error) {
-        console.log('error', error)
         return rejectWithValue(error)
     }
 })
+
+// edit action
+export const updateUser = createAsyncThunk(
+    "updateUser",
+    async (data, { rejectWithValue }) => {
+        const response = await fetch(`https://64a1de510079ce56e2db730e.mockapi.io/crud/${data.id}`,
+            {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            }
+        );
+        try {
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+    }
+)
 export const userDetail = createSlice({
     name: "userDetail",
     initialState: {
         users: [],
         loading: false,
         error: null,
+        searchData: []
+    },
+    reducers: {
+        searchUser: (state, action) => {
+            // console.log(action, state)
+            state.searchData = action.payload
+        }
     },
     extraReducers: {
         [createUser.pending]: (state) => {
@@ -87,9 +115,24 @@ export const userDetail = createSlice({
         },
         [userDelete.rejected]: (state, action) => {
             state.loading = false;
-            // state.error = action.payload;
+            state.error = action.payload;
+        },
+        [updateUser.pending]: (state) => {
+            state.loading = true
+        },
+        [updateUser.fulfilled]: (state, action) => {
+            state.loading = false;
+            state.users = state.users.map((ele) =>
+                ele.id === action?.payload?.id ? action?.payload : ele
+            );
+        },
+        [updateUser.rejected]: (state, action) => {
+            state.loading = false;
+            state.error = action.payload;
         },
     }
 
 })
+
 export default userDetail.reducer
+export const { searchUser } = userDetail.actions

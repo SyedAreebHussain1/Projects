@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Navbar from './components/Navbar';
 import Create from './components/Create';
 import Read from "./components/Read";
+import Update from "./components/Update";
+
 import './App.css';
 function App() {
   return (
@@ -10,8 +12,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/' element={<Create />} />
-          <Route exact path='/read' element={<Read />} />
-          {/* <Create /> */}
+          <Route path='/read' element={<Read />} />
+          <Route path='/update/:id' element={<Update />} />
         </Routes>
       </BrowserRouter>
     </div>
