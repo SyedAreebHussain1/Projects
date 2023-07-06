@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import { getReadListApi } from '../../../redux/api/CrudTwo';
-import CustomModal from './CustomModal/CustomModal';
+import ViewDetail from './ViewDetail/ViewDetail';
 
 function ReadCard() {
     const dispatch = useDispatch()
-    const [showPopup, setShowPopup] = useState(false)
-    const [dataProp, setDataProp] = useState()
+    const [modalShow, setModalShow] = useState(false);
+    const [viewSigleUser, setViewSigleUser] = useState()
     const { data, loading } = useSelector((state) => state.getReadListSlice)
     useEffect(() => {
         getReadListApi(dispatch)
@@ -17,8 +18,11 @@ function ReadCard() {
     }
     return (
         <div className='m-auto w-[50%] p-[10px]'>
-            {/* <CustomModal /> */}
-            {showPopup && <CustomModal data={dataProp} showPopup={showPopup} setShowPopup={setShowPopup} />}
+            <ViewDetail
+                show={modalShow}
+                viewSigleUser={viewSigleUser}
+                onHide={() => setModalShow(false)}
+            />
             {data?.map((val, i) => {
                 return <Card
                     bg={"Light".toLowerCase()}
@@ -26,13 +30,14 @@ function ReadCard() {
                     text={"Light".toLowerCase() === 'light' ? 'dark' : 'white'}
                     className="mb-2"
                 >
-                    <Card.Header>{i + 1}</Card.Header>
                     <Card.Body>
                         <Card.Title>{val?.firstName + ' ' + val?.lastName}</Card.Title>
                         <Card.Text>{val?.email}</Card.Text>
                         <Card.Text>{val?.phoneNo}</Card.Text>
                         <Card.Text>{val?.gender}</Card.Text>
-                        <button className="card-link" onClick={() => [setDataProp(val), setShowPopup(true)]}>View</button>
+                        <Button variant="primary" onClick={() => [setModalShow(true), setViewSigleUser(val)]}>
+                            View
+                        </Button>
                     </Card.Body>
                 </Card>
 
