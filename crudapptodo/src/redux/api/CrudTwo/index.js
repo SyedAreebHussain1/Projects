@@ -8,6 +8,11 @@ import {
     createCrudTwoFailure,
     // clearCreateCrudTwo,
 } from "../../slice/CrudTwo/createCrudTwoSlice";
+import {
+    getReadList,
+    getReadListSuccess,
+    getReadListFailure,
+} from "../../slice/CrudTwo/getReadListSlice";
 
 export async function createCrudTwoApi(dispatch, formData, onSuccess, onFailure) {
     dispatch(createCrudTwo());
@@ -29,6 +34,21 @@ export async function createCrudTwoApi(dispatch, formData, onSuccess, onFailure)
         getError(error);
         onFailure(error)
         dispatch(createCrudTwoFailure(error.response.data));
+    }
+}
+
+export async function getReadListApi(dispatch) {
+    dispatch(getReadList());
+    try {
+        // program to generate random strings
+        let res = await getRequest(API.crudTwo.crudTwo);
+        dispatch(getReadListSuccess(res.data));
+        successMessage(res.data.message);
+        // onSuccess(res?.statusText);
+    } catch (error) {
+        getError(error);
+        // onFailure(error)
+        dispatch(getReadListFailure(error.response.data));
     }
 }
 
