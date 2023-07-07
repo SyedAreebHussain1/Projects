@@ -1,5 +1,5 @@
 import { API } from "../../../config/apiEndPoints";
-import { getError, getRequest, postRequest } from "../../../utils/baseApi";
+import { deleteRequest, getError, getRequest, postRequest } from "../../../utils/baseApi";
 import { successMessage } from "../../../utils/message";
 import { setInStorage } from "../../../utils/storage";
 import {
@@ -13,6 +13,11 @@ import {
     getReadListSuccess,
     getReadListFailure,
 } from "../../slice/CrudTwo/getReadListSlice";
+import {
+    deleteSingleData,
+    deleteSingleDataSuccess,
+    deleteSingleDataFailure,
+} from "../../slice/CrudTwo/deleteSingleDataSlice"
 
 export async function createCrudTwoApi(dispatch, formData, onSuccess, onFailure) {
     dispatch(createCrudTwo());
@@ -49,6 +54,21 @@ export async function getReadListApi(dispatch) {
         getError(error);
         // onFailure(error)
         dispatch(getReadListFailure(error.response.data));
+    }
+}
+export async function deleteSingleDataApi(dispatch, id) {
+    // console.log(id)
+    dispatch(deleteSingleData());
+    try {
+        // program to generate random strings
+        let res = await deleteRequest(`${API.crudTwo.crudTwo}/${id}`);
+        dispatch(deleteSingleDataSuccess(res.data));
+        successMessage(res.data.message);
+        // onSuccess(res?.statusText);
+    } catch (error) {
+        getError(error);
+        // onFailure(error)
+        dispatch(deleteSingleDataFailure(error.response.data));
     }
 }
 

@@ -69,7 +69,6 @@ const AddDataForm = () => {
         }
     }
     function onFailure(msg) {
-        console.log('error msg', msg)
         setAlertMsg({
             msg: "Error",
             keyName: "danger"

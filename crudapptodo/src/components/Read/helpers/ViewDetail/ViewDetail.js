@@ -14,12 +14,16 @@ const ViewDetail = (props) => {
         >
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter" className="custom-header">
-                    View Detail
+                    {viewSigleUser?.firstName} Detail
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <h4>{`${viewSigleUser.firstName} ${viewSigleUser.lastName}`}</h4>
-                <p></p>
+                <h4>Full Name: {`${viewSigleUser?.firstName} ${viewSigleUser?.lastName}`}</h4>
+                <p>Email: {viewSigleUser?.email}</p>
+                <p>User id: {viewSigleUser?.phoneNo}</p>
+                <p>Age: {viewSigleUser?.age}</p>
+                <p>Gender: {viewSigleUser?.gender}</p>
+                <p>Phone no: {viewSigleUser?.phoneNo}</p>
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={onHide}>Close</Button>
