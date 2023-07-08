@@ -1,7 +1,7 @@
 import React from 'react'
-import ReadCard from './helpers/Card'
+import DataTable from './helpers/DataTable'
 const Read = () => {
-    return <ReadCard />
+    return <DataTable />
 }
 
 export default Read

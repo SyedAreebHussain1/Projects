@@ -25,6 +25,7 @@ export const postRequest = (api, body) => {
 
   return axios.post(api, body, headers);
 };
+
 //Patch Request for
 export const patchRequest = (api, body) => {
   const headers = {
@@ -36,6 +37,7 @@ export const patchRequest = (api, body) => {
 
   return axios.patch(api, body, headers);
 };
+
 //Post multipart Request
 export const fileRequest = (api, body) => {
   const headers = {
@@ -46,6 +48,17 @@ export const fileRequest = (api, body) => {
   };
 
   return axios.post(api, body, headers);
+};
+
+export const putRequest = (api, body) => {
+  const headers = {
+    headers: {
+      "Content-Type": "multipart/form-data",
+      Authorization: `Bearer ${getFromStorage("token")}`,
+    },
+  };
+
+  return axios.put(api, body, headers);
 };
 //Patch multipart Request
 export const patchFileRequest = (api, body) => {

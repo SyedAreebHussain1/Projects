@@ -1,53 +1,79 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useDispatch, useSelector } from 'react-redux';
+import { MdDelete } from 'react-icons/md';
 import CloseButton from 'react-bootstrap/CloseButton';
+import { FaUserEdit } from 'react-icons/fa';
+import { deleteSingleDataApi, getReadListApi } from '../../../../redux/api/CrudTwo';
+import Updated from '../UpdateDetail/Updated';
 
 const ViewDetail = (props) => {
-    const { viewSigleUser, onHide } = props
+    const { data, onHide, handleEditModal } = props
+    const dispatch = useDispatch()
+    const updatedSingleData = useSelector((state) => state.updatedSingleDataSlice)
+    const [modalShowUpdate, setModalShowUpdate] = useState(false);
+    const [dataInUpdate, setDataInUpdate] = useState()
+    const iconStyle = {
+        fontSize: '1rem',
+        marginTop: '5px'
+    };
+    const handleDelete = (id) => {
+        if (id) {
+            deleteSingleDataApi(dispatch, id, onSuccess)
+        }
+    }
+    function onSuccess() {
+        onHide()
+        getReadListApi(dispatch)
+    }
+    useEffect(() => {
+        if (updatedSingleData.data) {
+            onHide()
+        } else {
+            return
+        }
+    }, [updatedSingleData.data])
+    console.log('updatedSingleData', updatedSingleData);
     return (
-        <Modal
-            {...props}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-        >
-            <Modal.Header closeButton>
-                <Modal.Title id="contained-modal-title-vcenter" className="custom-header">
-                    {viewSigleUser?.firstName} Detail
-                </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <h4>Full Name: {`${viewSigleUser?.firstName} ${viewSigleUser?.lastName}`}</h4>
-                <p>Email: {viewSigleUser?.email}</p>
-                <p>User id: {viewSigleUser?.phoneNo}</p>
-                <p>Age: {viewSigleUser?.age}</p>
-                <p>Gender: {viewSigleUser?.gender}</p>
-                <p>Phone no: {viewSigleUser?.phoneNo}</p>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={onHide}>Close</Button>
-            </Modal.Footer>
-        </Modal>
+        <>
+            <Updated
+                show={modalShowUpdate}
+                onHide={() => setModalShowUpdate(false)}
+                data={dataInUpdate}
+            />
+            <Modal
+                {...props}
+                size="lg"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                        <div className='flex'><span>Detail id: {data?.id}</span>  <span></span></div>
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <ul>
+                        <li>Full Name: {`${data?.firstName} ${data?.lastName}`}</li>
+                        <li>Email: {data?.email}</li>
+                        <li>Phone no: {data?.phoneNo}</li>
+                        <li>Age: {data?.age}</li>
+                        <li>Gender: {data?.gender}</li>
+                    </ul>
+                </Modal.Body>
+                <Modal.Footer>
+
+                    <button className='flex gap-0' onClick={() => handleDelete(data?.id)}> <span>Delete</span> <span><MdDelete style={iconStyle} /></span>  </button>
+                    <button className='flex gap-0' onClick={() => [setModalShowUpdate(true), setDataInUpdate(data)]}><span>Edit</span>  <span><FaUserEdit style={iconStyle} /></span> </button>
+                    <button onClick={onHide}>Close</button>
+
+                </Modal.Footer>
+            </Modal>
+        </>
     )
 }
 
 export default ViewDetail
 
 
-
-// const CustomModal = ({ data, showPopup, setShowPopup }) => {
-//     console.log(data)
-//     return (
-//         <div onClick={() => setShowPopup(false)} className='fixed bg-black bottom-0 left-0 top-0 right-0 flex justify-center items-center opacity-80 z-50' >
-//             <div className='bg-white p-[10px] shadow-[0px 0px 0px #888] h-[300px] w-[300px] rounded-lg'>
-//                 <button onClick={() => setShowPopup(false)} >close</button>
-//                 <h2>{data.firstName}</h2>
-//                 <h3>{data.email}</h3>
-//                 <h4>{data.age}</h4>
-//                 <p>{data?.gender}</p>
-//             </div>
-//         </div>
-//     )
-// }
-// export default CustomModal
