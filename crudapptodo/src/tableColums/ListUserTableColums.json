@@ -1,0 +1,42 @@
+[
+  {
+    "title": "#",
+    "dataIndex": "no",
+    "key": "no"
+  },
+  {
+    "title": "First Name",
+    "dataIndex": "firstName",
+    "key": "firstName"
+  },
+  {
+    "title": "Last Name",
+    "dataIndex": "lastName",
+    "key": "status"
+  },
+  {
+    "title": "Phone no",
+    "dataIndex": "phoneNo",
+    "key": "phoneNo"
+  },
+  {
+    "title": "Email",
+    "dataIndex": "email",
+    "key": "email"
+  },
+  {
+    "title": "Age",
+    "dataIndex": "age",
+    "key": "age"
+  },
+  {
+    "title": "Gender",
+    "dataIndex": "gender",
+    "key": "gender"
+  },
+  {
+    "title": "Action",
+    "dataIndex": "action",
+    "key": "action"
+  }
+]
