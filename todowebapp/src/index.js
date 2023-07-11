@@ -1,10 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import axios from "axios";
+import { BrowserRouter } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
+import store from './redux/store';
+import { Provider } from 'react-redux';
 import App from './App';
 import './index.css';
-axios.defaults.baseURL = "https://64a1de510079ce56e2db730e.mockapi.io/"
+// axios.defaults.baseURL = "http://localhost:5000/"
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+    <Provider store={store}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>
+);
 reportWebVitals();
