@@ -1,9 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import createTodoListSlice from "./slice/todo/createTodoListSlice";
-import getTodoListSlice from "./slice/todo/getTodoListSlice";
+// import getTodoListSlice from "./slice/todo/getTodoListSlice";
 const rootSlices = combineReducers({
     todoListSlice: createTodoListSlice,
-    getTodoListSlice: getTodoListSlice,
+    // getTodoListSlice: getTodoListSlice,
 });
 
 const store = configureStore({

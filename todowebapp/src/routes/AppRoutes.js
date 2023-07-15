@@ -1,9 +1,13 @@
 import React from 'react'
-import {  Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import Updated from '../components/Updated'
+import App from '../App'
 const AppRoutes = () => {
   return (
-    <div>AppRoutes</div>
+    <Routes>
+      <Route exact path='/' element={<App />} />
+      <Route path='/edit' element={<Updated />} />
+    </Routes>
   )
 }
-
 export default AppRoutes
