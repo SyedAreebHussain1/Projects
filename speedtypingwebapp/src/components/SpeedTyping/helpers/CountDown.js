@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const CountDown = ({ countDown }) => {
-
-    return <div className="timer" id="timer">{countDown}</div>
+    // console.log('countDown', countDown)
+    return <div className="timer" id="timer">{`Time: ${countDown}`}</div>
 }
 
 export default CountDown

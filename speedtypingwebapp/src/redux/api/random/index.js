@@ -1,5 +1,5 @@
 import { API } from "../../../config/apiEndpoint";
-import { deleteRequest, getRequest, postRequest } from "../../../utils/baseApi";
+import { getRequest } from "../../../utils/baseApi";
 import {
     getRandomContent,
     getRandomContentSuccess,
@@ -8,11 +8,12 @@ import {
 
 
 // Get random content
-export async function getRandomContentApi(dispatch) {
+export async function getRandomContentApi(dispatch, onSuccess) {
     dispatch(getRandomContent())
     try {
         let res = await getRequest(API.random);
         dispatch(getRandomContentSuccess(res.data));
+        onSuccess(res)
     } catch (error) {
         dispatch(getRandomContentFailure(error?.response?.data));
     }

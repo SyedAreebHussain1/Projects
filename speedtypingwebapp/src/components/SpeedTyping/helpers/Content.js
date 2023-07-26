@@ -1,26 +1,29 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-// api function
+// api
 import { getRandomContentApi } from '../../../redux/api/random'
 
-const Content = ({ startTimer }) => {
+const Content = ({ startTimer, setCountDown }) => {
     const dispatch = useDispatch()
-    // let { correct, setCorrect } = useState(true)
     const classRef = useRef()
     let [content, setContent] = useState('')
-
     let [quoteInput, setQuoteInput] = useState('')
     const { data, loading } = useSelector((state) => state?.getRandomContentSlice)
-    useEffect(() => {
-        getRandomContentApi(dispatch)
-    }, [])
+
+    function renderHandle(bool) {
+        if (bool) {
+            getRandomContentApi(dispatch, onSuccess)
+            setCountDown(0)
+        }
+    }
+    function onSuccess(msg) { }
     useEffect(() => {
         if (data?.content) {
             setContent(data?.content)
             startTimer()
         }
-    }, [data])
+    }, [data?.content])
     useEffect(() => {
         if (quoteInput[quoteInput.length - 1] === content[quoteInput.length - 1]) {
             classRef?.current?.children[quoteInput.length - 1]?.classList?.remove("incorrect")
@@ -28,30 +31,35 @@ const Content = ({ startTimer }) => {
         } else {
             classRef?.current?.children[quoteInput.length - 1]?.classList?.remove("correct")
             classRef?.current?.children[quoteInput.length - 1]?.classList?.add("incorrect")
-            // setCorrect(false)
         }
         for (let i = content.length - 1; i > quoteInput.length - 1; i--) {
             classRef?.current?.children[i]?.classList?.remove("correct")
             classRef?.current?.children[i]?.classList?.remove("incorrect")
-            // setCorrect(false)
         }
-        
+        if (quoteInput === content) {
+            renderHandle(quoteInput === content)
+            setCountDown(0)
+            setQuoteInput('')
+        }
     }, [quoteInput, content])
+
     return (
         <div className="container">
             <div className="quote-display " id="quoteDisplay" ref={classRef}>{content && content.split('').map((character, i) => {
-                return <span className='select-none' key={i}>
+                return <span className='' key={i}>
                     {character}
                 </span>
             })}</div>
-            <textarea id="quoteInput" maxLength={content?.length} className="quote-input" onChange={(e) => setQuoteInput(e.target.value)} autoFocus onPaste={(e) => {
-                e.preventDefault();
-            }} onKeyDown={(e) => {
-                if (e.ctrlKey && e.key === 'z') {
+            <textarea id="quoteInput" value={quoteInput} maxLength={content?.length} className="quote-input" onChange={(e) => setQuoteInput(e.target.value)} autoFocus
+                onPaste={(e) => {
                     e.preventDefault();
-                }
-            }}></textarea>
-        </div >
+                }} onKeyDown={(e) => {
+                    if (e.ctrlKey && e.key === 'z') {
+                        e.preventDefault();
+                    }
+                }}
+            ></textarea>
+        </div>
     )
 }
 
