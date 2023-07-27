@@ -6,7 +6,6 @@ import CountDown from './helpers/CountDown'
 
 const SpeedTyping = () => {
     let [countDown, setCountDown] = useState(0)
-
     let startTime = 0
 
     function startTimer() {
@@ -19,9 +18,11 @@ const SpeedTyping = () => {
     function getTimerTime() {
         return Math.floor((new Date() - startTime) / 1000)
     }
+    console.log(countDown)
     return <>
         <CountDown countDown={countDown} />
         <Content
+            countDown={countDown}
             setCountDown={setCountDown}
             startTimer={startTimer}
         />

@@ -8,12 +8,11 @@ import {
 
 
 // Get random content
-export async function getRandomContentApi(dispatch, onSuccess) {
+export async function getRandomContentApi(dispatch) {
     dispatch(getRandomContent())
     try {
         let res = await getRequest(API.random);
         dispatch(getRandomContentSuccess(res.data));
-        onSuccess(res)
     } catch (error) {
         dispatch(getRandomContentFailure(error?.response?.data));
     }
