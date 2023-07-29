@@ -6,13 +6,15 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
+} */
+.main-div-game {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  /* background-color: #bdbfbf; */
+  padding: 100px;
 }
 
 body,
@@ -20,13 +22,13 @@ body,
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.container {
-  /* background-color: #a79f6a;
+/* .container {
+  background-color: #a79f6a;
   padding: 1rem;
   border-radius: .5rem;
   width: 700px;
-  max-width: 90%; */
-}
+  max-width: 90%;
+} */
 
 .timer {
   position: absolute;
@@ -128,4 +130,182 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+
+/* .container {
+  text-align: center;
+} */
+
+.btn-google {
+  display: inline-flex;
+  /* align-items: center; */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #054ec2;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.btn-google:hover {
+  /* background-color: #3277C2; */
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.thumbs-up-icon {
+  font-size: 1.5rem !important;
+}
+
+.text {
+  display: inline-block;
+}
+
+
+
+/* login form  */
+.login-container-main {
+  font-family: Arial, sans-serif;
+  /* background-color: #f2f2f2; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* width: 300px; */
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+/* btn */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  /* font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif; */
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+
+.button-23 {
+  background: #2b47e6;
+  border: 1px solid #2b47e6;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  /* font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif; */
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+.button-23:hover,
+.button-23:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #2b47e6;
+}
+
+.button-23:active {
+  opacity: .5;
 }

@@ -7,12 +7,14 @@ import store from './redux/store';
 import { Provider } from 'react-redux';
 import AppRoutes from './routes/AppRoutes';
 import './index.css';
+import App from './App';
 axios.defaults.baseURL = "http://api.quotable.io/"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
         <Provider store={store}>
-            <AppRoutes />
+            {/* <AppRoutes /> */}
+            <App />
         </Provider>
     </BrowserRouter>
 );

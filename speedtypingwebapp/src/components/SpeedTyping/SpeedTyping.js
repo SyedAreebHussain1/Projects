@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 //components
 import Content from './helpers/Content'
 import CountDown from './helpers/CountDown'
+import AuthGoogle from '../AuthGoogle/AuthGoogle'
 
 const SpeedTyping = () => {
     let [countDown, setCountDown] = useState(0)
@@ -18,15 +19,14 @@ const SpeedTyping = () => {
     function getTimerTime() {
         return Math.floor((new Date() - startTime) / 1000)
     }
-    console.log(countDown)
-    return <>
-        <CountDown countDown={countDown} />
+    return <div className='main-div-game'>
+        {/* <CountDown countDown={countDown} /> */}
         <Content
             countDown={countDown}
             setCountDown={setCountDown}
             startTimer={startTimer}
         />
-    </>
+    </div>
 }
 
 export default SpeedTyping

@@ -1,35 +1,29 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { auth } from '../../../config/firabseConfig';
+
 // api
 import { getRandomContentApi } from '../../../redux/api/random'
 
 const Content = ({ startTimer, setCountDown, countDown }) => {
-    // console.log('startTimer', startTimer())
     const dispatch = useDispatch()
     const classRef = useRef()
     const [count, setCount] = useState(0);
+    const token = localStorage.getItem("token");
     let [content, setContent] = useState('')
     let [quoteInput, setQuoteInput] = useState('')
-    let [brithness, setBrithness] = useState()
     const { data } = useSelector((state) => state?.getRandomContentSlice)
+    const signOutWithGoogleSlice = useSelector((state) => state?.signOutWithGoogleSlice)
     function renderHandle(bool) {
-        if (bool) {
+        if (bool && dispatch) {
             getRandomContentApi(dispatch)
-            startTimer()
         }
     }
     useEffect(() => {
-        if (brithness) {
-            document.body.style.backgroundColor = '#2c2626';
-        } else {
-            document.body.style.backgroundColor = '#bdbfbf';
-        }
-    }, [brithness])
-    useEffect(() => {
         if (data?.content) {
             setContent(data?.content)
+            startTimer()
             setCount(count + 1)
-
         }
     }, [data?.content])
     useEffect(() => {
@@ -46,10 +40,6 @@ const Content = ({ startTimer, setCountDown, countDown }) => {
         }
         if (quoteInput === content) {
             renderHandle(quoteInput)
-            countDown = 0
-            setCountDown((prev) => {
-                console.log('prev', prev)
-            })
             setQuoteInput('')
         }
     }, [quoteInput, content])
@@ -57,15 +47,11 @@ const Content = ({ startTimer, setCountDown, countDown }) => {
         <div className="container bg-[#a79f6a] p-4 rounded-sm w-700 max-w-90">
             <div className='flex' style={{ justifyContent: "space-between" }}>
                 <div>
-                    <div><h4 className='text-[12px]'>White/Dark</h4></div>
-                    <label className="switch">
-                        <input type="checkbox" onClick={(e) =>
-                            setBrithness(e.target.checked)} />
-                        <span className="slider round"></span>
-                    </label>
+                    <div><h1 className='font-bold '>{`Timer: ${countDown && countDown}`}</h1></div>
                 </div>
                 <div><h1 className='font-bold '>{`Round: ${count && count}`}</h1></div>
             </div>
+
             <div className="quote-display " id="quoteDisplay" ref={classRef}>{content && content.split('').map((character, i) => {
                 return <span className='select-none' key={i}>
                     {character}
@@ -81,7 +67,7 @@ const Content = ({ startTimer, setCountDown, countDown }) => {
                 }}
             ></textarea>
 
-            {data?.content ? '' : <input type="button" onClick={renderHandle} className="bg-gray-600 border-none text-[white] px-10 py-15 text-center no-underline inline-block text-base my-4 mx-2 cursor-pointer" value="Start Typing"></input>}
+            {data?.content ? '' : <button onClick={renderHandle} className='button-23'>Start</button>}
         </div>
     )
 }
