@@ -1,5 +1,4 @@
 import React from 'react'
-import signInViewImg from '../../../assest/images/SignInViewImg/signin.png'
 import images from '../../../assest/images/SignInViewImg/images.jpg'
 import SignInForm from './SignInForm'
 

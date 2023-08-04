@@ -24,9 +24,6 @@ export async function signInWithGoogleApi(dispatch, onSuccess, onFailure) {
         dispatch(createSignInWithGoogleSuccess(res));
         localStorage.setItem('userObject', JSON.stringify(userData))
         localStorage.setItem('token', JSON.stringify(res?.user?.accessToken))
-        // cookies.set("authToken", res.user.refreshToken)
-        // setInStorage("userObject", userData);
-        // setInStorage("authToken", res.user.accessToken);
         onSuccess(res);
     } catch (error) {
         dispatch(createSignInWithGoogleFailure(error));

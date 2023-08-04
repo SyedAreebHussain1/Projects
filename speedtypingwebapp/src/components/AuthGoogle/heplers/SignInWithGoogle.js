@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { FcGoogle } from 'react-icons/fc'
-import { auth, provider } from '../../../config/firabseConfig'
 import { signInWithGoogleApi } from '../../../redux/api/auths/index'
 
 const SignInWithGoogle = ({ setIsAuth }) => {
@@ -15,10 +14,8 @@ const SignInWithGoogle = ({ setIsAuth }) => {
     }
     function onSuccess(msg) {
         setIsAuth(true)
-        // console.log('onSuccess', msg)
     }
     function onFailure(msg) {
-        // console.log('onFailure', msg)
     }
     return (
         <div className="">

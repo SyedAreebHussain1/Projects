@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 //components
 import Content from './helpers/Content'
 import CountDown from './helpers/CountDown'
-import AuthGoogle from '../AuthGoogle/AuthGoogle'
 
 const SpeedTyping = () => {
     let [countDown, setCountDown] = useState(0)

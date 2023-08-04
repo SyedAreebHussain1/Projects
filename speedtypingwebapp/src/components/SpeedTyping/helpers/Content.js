@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { auth } from '../../../config/firabseConfig';
+// import { auth } from '../../../config/firabseConfig';
 
 // api
 import { getRandomContentApi } from '../../../redux/api/random'
@@ -9,11 +9,11 @@ const Content = ({ startTimer, setCountDown, countDown }) => {
     const dispatch = useDispatch()
     const classRef = useRef()
     const [count, setCount] = useState(0);
-    const token = localStorage.getItem("token");
+    // const token = localStorage.getItem("token");
     let [content, setContent] = useState('')
     let [quoteInput, setQuoteInput] = useState('')
     const { data } = useSelector((state) => state?.getRandomContentSlice)
-    const signOutWithGoogleSlice = useSelector((state) => state?.signOutWithGoogleSlice)
+    // const signOutWithGoogleSlice = useSelector((state) => state?.signOutWithGoogleSlice)
     function renderHandle(bool) {
         if (bool && dispatch) {
             getRandomContentApi(dispatch)

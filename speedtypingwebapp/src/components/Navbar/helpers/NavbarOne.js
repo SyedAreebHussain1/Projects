@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -32,9 +31,7 @@ const NavbarOne = ({ setIsAuth }) => {
         localStorage.removeItem("token");
         localStorage.removeItem("userObject");
     }
-    function onFailureSignOut(msg) {
-        // console.log('onFailureSignOut', msg)
-    }
+    function onFailureSignOut(msg) { }
     return (<>
         <SignOutModal
             show={modalShow}
