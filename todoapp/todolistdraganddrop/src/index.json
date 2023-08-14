@@ -1,0 +1,823 @@
+{
+    "message": "Successfully get",
+    "data": {
+      "items": [
+        {
+          "id": 141,
+          "createdBy": 3,
+          "createdByUser": {
+            "id": 3,
+            "profile": {
+              "id": 3,
+              "fullName": "Kamal",
+              "agency": {
+                "id": 3,
+                "agencyName": "Moon estate agent"
+              }
+            }
+          },
+          "client": {
+            "id": 141,
+            "name": "furqan saleem",
+            "email": null,
+            "phone": "+923215466136",
+            "otpCode": null,
+            "createdBy": 3,
+            "createdAt": "2023-08-04T13:21:00.889Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T13:21:00.889Z"
+          },
+          "leadInventoryOne": {
+            "id": 163,
+            "propertyWalletInventoryPlot": {
+              "id": 108,
+              "propertyWalletInventory": {
+                "id": 60,
+                "propertyWalletProjectId": 42,
+                "projectTypeId": 1,
+                "projectSubTypeId": 1,
+                "landSize": "250",
+                "landAreaId": 1,
+                "description": "Khyber Golf City will be the only mega-development project on the M1 motorway near the capital city of KPK. The main objective behind the development of this project is to provide a sustainable housing development project comprising high-class planning and infrastructure development with improved, enhanced and contemporary lifestyle.",
+                "price": "6000",
+                "noOfUnit": 4,
+                "noOfSold": 0,
+                "inventoryStatus": "COMPLETED",
+                "createdAt": "2023-08-04T10:59:53.195Z",
+                "updatedAt": "2023-08-04T11:39:02.565Z",
+                "deletedAt": null,
+                "createdBy": 1,
+                "updatedBy": null,
+                "propertyWalletProject": {
+                  "id": 42,
+                  "projectName": "Ahmed uzair`"
+                }
+              }
+            },
+            "propertyWalletProduct": null
+          },
+          "leadInventory": [
+            {
+              "id": 163,
+              "leadId": 141,
+              "propertyWalletInventoryPlotId": 108,
+              "propertyWalletProductId": null,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T13:21:00.889Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T13:21:00.889Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": {
+            "id": 129,
+            "propertyWalletInventoryFinalizeSale": {
+              "id": 111,
+              "cnic": "2331666643333"
+            }
+          },
+          "propertyWalletProductSaleQuotation": null
+        },
+        {
+          "id": 140,
+          "createdBy": 3,
+          "createdByUser": {
+            "id": 3,
+            "profile": {
+              "id": 3,
+              "fullName": "Kamal",
+              "agency": {
+                "id": 3,
+                "agencyName": "Moon estate agent"
+              }
+            }
+          },
+          "client": {
+            "id": 140,
+            "name": "huzaifa",
+            "email": null,
+            "phone": "+923090304360",
+            "otpCode": null,
+            "createdBy": 3,
+            "createdAt": "2023-08-04T12:44:56.717Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T12:44:56.717Z"
+          },
+          "leadInventoryOne": {
+            "id": 162,
+            "propertyWalletInventoryPlot": {
+              "id": 86,
+              "propertyWalletInventory": {
+                "id": 56,
+                "propertyWalletProjectId": 41,
+                "projectTypeId": 1,
+                "projectSubTypeId": 7,
+                "landSize": "500",
+                "landAreaId": 2,
+                "description": "Khyber Golf City is a secured gated community with state-of-the-art infrastructure comprising all amenities such as mosques, pharmacies and health facilities that are strategically located close to every home. Realizing the need for quality education, here we have also planned for schools and colleges adhering to international standards in terms of quality teaching, management and infrastructure. Parks and community centers are also being built for recreational purposes. Waterfront golf course, high rise apartments and theme parks will also be built which will further enhance the beautiful views of the kabul river.",
+                "price": "6000",
+                "noOfUnit": 10,
+                "noOfSold": 11,
+                "inventoryStatus": "COMPLETED",
+                "createdAt": "2023-08-03T10:01:52.780Z",
+                "updatedAt": "2023-08-04T12:18:29.259Z",
+                "deletedAt": null,
+                "createdBy": 1,
+                "updatedBy": null,
+                "propertyWalletProject": {
+                  "id": 41,
+                  "projectName": "Ahmed Usman"
+                }
+              }
+            },
+            "propertyWalletProduct": null
+          },
+          "leadInventory": [
+            {
+              "id": 162,
+              "leadId": 140,
+              "propertyWalletInventoryPlotId": 86,
+              "propertyWalletProductId": null,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T12:44:56.717Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T12:44:56.717Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": {
+            "id": 128,
+            "propertyWalletInventoryFinalizeSale": null
+          },
+          "propertyWalletProductSaleQuotation": null
+        },
+        {
+          "id": 139,
+          "createdBy": 1,
+          "createdByUser": {
+            "id": 1,
+            "profile": {
+              "id": 1,
+              "fullName": "Altaf Hussain",
+              "agency": {
+                "id": 1,
+                "agencyName": "90 Real Estate"
+              }
+            }
+          },
+          "client": {
+            "id": 139,
+            "name": "Aman khan",
+            "email": null,
+            "phone": "+920313216446",
+            "otpCode": null,
+            "createdBy": 1,
+            "createdAt": "2023-08-04T12:29:14.383Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T12:29:14.383Z"
+          },
+          "leadInventoryOne": {
+            "id": 161,
+            "propertyWalletInventoryPlot": {
+              "id": 80,
+              "propertyWalletInventory": {
+                "id": 48,
+                "propertyWalletProjectId": 40,
+                "projectTypeId": 2,
+                "projectSubTypeId": 8,
+                "landSize": "5",
+                "landAreaId": 4,
+                "description": "5 Marla plots for sale in installment and cash deals",
+                "price": "3000",
+                "noOfUnit": 5,
+                "noOfSold": 2,
+                "inventoryStatus": "COMPLETED",
+                "createdAt": "2023-08-02T13:15:03.412Z",
+                "updatedAt": "2023-08-04T12:30:51.517Z",
+                "deletedAt": null,
+                "createdBy": 1,
+                "updatedBy": null,
+                "propertyWalletProject": {
+                  "id": 40,
+                  "projectName": "Khyber Golf City"
+                }
+              }
+            },
+            "propertyWalletProduct": null
+          },
+          "leadInventory": [
+            {
+              "id": 161,
+              "leadId": 139,
+              "propertyWalletInventoryPlotId": 80,
+              "propertyWalletProductId": null,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T12:29:14.383Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T12:29:14.383Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": {
+            "id": 127,
+            "propertyWalletInventoryFinalizeSale": {
+              "id": 109,
+              "cnic": "4220114646575"
+            }
+          },
+          "propertyWalletProductSaleQuotation": null
+        },
+        {
+          "id": 138,
+          "createdBy": 3,
+          "createdByUser": {
+            "id": 3,
+            "profile": {
+              "id": 3,
+              "fullName": "Kamal",
+              "agency": {
+                "id": 3,
+                "agencyName": "Moon estate agent"
+              }
+            }
+          },
+          "client": {
+            "id": 138,
+            "name": "Asad",
+            "email": null,
+            "phone": "+923158224993",
+            "otpCode": null,
+            "createdBy": 3,
+            "createdAt": "2023-08-04T12:27:57.990Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T12:27:57.990Z"
+          },
+          "leadInventoryOne": {
+            "id": 160,
+            "propertyWalletInventoryPlot": {
+              "id": 80,
+              "propertyWalletInventory": {
+                "id": 48,
+                "propertyWalletProjectId": 40,
+                "projectTypeId": 2,
+                "projectSubTypeId": 8,
+                "landSize": "5",
+                "landAreaId": 4,
+                "description": "5 Marla plots for sale in installment and cash deals",
+                "price": "3000",
+                "noOfUnit": 5,
+                "noOfSold": 2,
+                "inventoryStatus": "COMPLETED",
+                "createdAt": "2023-08-02T13:15:03.412Z",
+                "updatedAt": "2023-08-04T12:30:51.517Z",
+                "deletedAt": null,
+                "createdBy": 1,
+                "updatedBy": null,
+                "propertyWalletProject": {
+                  "id": 40,
+                  "projectName": "Khyber Golf City"
+                }
+              }
+            },
+            "propertyWalletProduct": null
+          },
+          "leadInventory": [
+            {
+              "id": 160,
+              "leadId": 138,
+              "propertyWalletInventoryPlotId": 80,
+              "propertyWalletProductId": null,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T12:27:57.990Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T12:27:57.990Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": {
+            "id": 126,
+            "propertyWalletInventoryFinalizeSale": {
+              "id": 110,
+              "cnic": "4210107440729"
+            }
+          },
+          "propertyWalletProductSaleQuotation": null
+        },
+        {
+          "id": 137,
+          "createdBy": 36,
+          "createdByUser": {
+            "id": 36,
+            "profile": {
+              "id": 36,
+              "fullName": "Arqum",
+              "agency": {
+                "id": 19,
+                "agencyName": "home agency"
+              }
+            }
+          },
+          "client": {
+            "id": 137,
+            "name": "raheel shakti",
+            "email": null,
+            "phone": "+923122228391",
+            "otpCode": null,
+            "createdBy": 36,
+            "createdAt": "2023-08-04T12:07:02.412Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T12:27:45.304Z"
+          },
+          "leadInventoryOne": {
+            "id": 159,
+            "propertyWalletInventoryPlot": {
+              "id": 87,
+              "propertyWalletInventory": {
+                "id": 56,
+                "propertyWalletProjectId": 41,
+                "projectTypeId": 1,
+                "projectSubTypeId": 7,
+                "landSize": "500",
+                "landAreaId": 2,
+                "description": "Khyber Golf City is a secured gated community with state-of-the-art infrastructure comprising all amenities such as mosques, pharmacies and health facilities that are strategically located close to every home. Realizing the need for quality education, here we have also planned for schools and colleges adhering to international standards in terms of quality teaching, management and infrastructure. Parks and community centers are also being built for recreational purposes. Waterfront golf course, high rise apartments and theme parks will also be built which will further enhance the beautiful views of the kabul river.",
+                "price": "6000",
+                "noOfUnit": 10,
+                "noOfSold": 11,
+                "inventoryStatus": "COMPLETED",
+                "createdAt": "2023-08-03T10:01:52.780Z",
+                "updatedAt": "2023-08-04T12:18:29.259Z",
+                "deletedAt": null,
+                "createdBy": 1,
+                "updatedBy": null,
+                "propertyWalletProject": {
+                  "id": 41,
+                  "projectName": "Ahmed Usman"
+                }
+              }
+            },
+            "propertyWalletProduct": null
+          },
+          "leadInventory": [
+            {
+              "id": 159,
+              "leadId": 137,
+              "propertyWalletInventoryPlotId": 87,
+              "propertyWalletProductId": null,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T12:07:02.412Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T12:07:02.412Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": {
+            "id": 125,
+            "propertyWalletInventoryFinalizeSale": {
+              "id": 108,
+              "cnic": "4210131824751"
+            }
+          },
+          "propertyWalletProductSaleQuotation": null
+        },
+        {
+          "id": 136,
+          "createdBy": 3,
+          "createdByUser": {
+            "id": 3,
+            "profile": {
+              "id": 3,
+              "fullName": "Kamal",
+              "agency": {
+                "id": 3,
+                "agencyName": "Moon estate agent"
+              }
+            }
+          },
+          "client": {
+            "id": 136,
+            "name": "khurrram",
+            "email": "khurram6@mailinator.com",
+            "phone": "+923216466461",
+            "otpCode": null,
+            "createdBy": 3,
+            "createdAt": "2023-08-04T10:37:56.517Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T10:37:56.517Z"
+          },
+          "leadInventoryOne": {
+            "id": 158,
+            "propertyWalletInventoryPlot": null,
+            "propertyWalletProduct": {
+              "id": 14,
+              "title": "khan villa"
+            }
+          },
+          "leadInventory": [
+            {
+              "id": 158,
+              "leadId": 136,
+              "propertyWalletInventoryPlotId": null,
+              "propertyWalletProductId": 14,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T10:37:56.517Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T10:37:56.517Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": null,
+          "propertyWalletProductSaleQuotation": null
+        },
+        {
+          "id": 135,
+          "createdBy": 3,
+          "createdByUser": {
+            "id": 3,
+            "profile": {
+              "id": 3,
+              "fullName": "Kamal",
+              "agency": {
+                "id": 3,
+                "agencyName": "Moon estate agent"
+              }
+            }
+          },
+          "client": {
+            "id": 135,
+            "name": "babar",
+            "email": null,
+            "phone": "+923215453131",
+            "otpCode": null,
+            "createdBy": 3,
+            "createdAt": "2023-08-04T10:35:12.273Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T10:35:12.273Z"
+          },
+          "leadInventoryOne": {
+            "id": 157,
+            "propertyWalletInventoryPlot": null,
+            "propertyWalletProduct": {
+              "id": 18,
+              "title": "Product Areeb"
+            }
+          },
+          "leadInventory": [
+            {
+              "id": 157,
+              "leadId": 135,
+              "propertyWalletInventoryPlotId": null,
+              "propertyWalletProductId": 18,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T10:35:12.273Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T10:35:12.273Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": null,
+          "propertyWalletProductSaleQuotation": null
+        },
+        {
+          "id": 134,
+          "createdBy": 3,
+          "createdByUser": {
+            "id": 3,
+            "profile": {
+              "id": 3,
+              "fullName": "Kamal",
+              "agency": {
+                "id": 3,
+                "agencyName": "Moon estate agent"
+              }
+            }
+          },
+          "client": {
+            "id": 134,
+            "name": "muhammad shuraim",
+            "email": null,
+            "phone": "+923216466434",
+            "otpCode": null,
+            "createdBy": 3,
+            "createdAt": "2023-08-04T10:28:17.272Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T10:28:17.272Z"
+          },
+          "leadInventoryOne": {
+            "id": 156,
+            "propertyWalletInventoryPlot": {
+              "id": 12,
+              "propertyWalletInventory": {
+                "id": 2,
+                "propertyWalletProjectId": 2,
+                "projectTypeId": 1,
+                "projectSubTypeId": 1,
+                "landSize": "14",
+                "landAreaId": 4,
+                "description": "Project for development use case only for Ahmed Usman",
+                "price": "6022000",
+                "noOfUnit": 20,
+                "noOfSold": 8,
+                "inventoryStatus": "COMPLETED",
+                "createdAt": "2023-07-20T10:21:28.823Z",
+                "updatedAt": "2023-08-02T10:11:51.975Z",
+                "deletedAt": null,
+                "createdBy": 1,
+                "updatedBy": null,
+                "propertyWalletProject": {
+                  "id": 2,
+                  "projectName": "Ahmed Town"
+                }
+              }
+            },
+            "propertyWalletProduct": null
+          },
+          "leadInventory": [
+            {
+              "id": 156,
+              "leadId": 134,
+              "propertyWalletInventoryPlotId": 12,
+              "propertyWalletProductId": null,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T10:28:17.272Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T10:28:17.272Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": null,
+          "propertyWalletProductSaleQuotation": {
+            "id": 24,
+            "propertyWalletProductFinalizeSale": {
+              "id": 22,
+              "cnic": "3216466461331"
+            }
+          }
+        },
+        {
+          "id": 133,
+          "createdBy": 3,
+          "createdByUser": {
+            "id": 3,
+            "profile": {
+              "id": 3,
+              "fullName": "Kamal",
+              "agency": {
+                "id": 3,
+                "agencyName": "Moon estate agent"
+              }
+            }
+          },
+          "client": {
+            "id": 133,
+            "name": "saud aleem",
+            "email": null,
+            "phone": "+923125461613",
+            "otpCode": null,
+            "createdBy": 3,
+            "createdAt": "2023-08-04T10:25:21.834Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T10:25:21.834Z"
+          },
+          "leadInventoryOne": {
+            "id": 155,
+            "propertyWalletInventoryPlot": {
+              "id": 87,
+              "propertyWalletInventory": {
+                "id": 56,
+                "propertyWalletProjectId": 41,
+                "projectTypeId": 1,
+                "projectSubTypeId": 7,
+                "landSize": "500",
+                "landAreaId": 2,
+                "description": "Khyber Golf City is a secured gated community with state-of-the-art infrastructure comprising all amenities such as mosques, pharmacies and health facilities that are strategically located close to every home. Realizing the need for quality education, here we have also planned for schools and colleges adhering to international standards in terms of quality teaching, management and infrastructure. Parks and community centers are also being built for recreational purposes. Waterfront golf course, high rise apartments and theme parks will also be built which will further enhance the beautiful views of the kabul river.",
+                "price": "6000",
+                "noOfUnit": 10,
+                "noOfSold": 11,
+                "inventoryStatus": "COMPLETED",
+                "createdAt": "2023-08-03T10:01:52.780Z",
+                "updatedAt": "2023-08-04T12:18:29.259Z",
+                "deletedAt": null,
+                "createdBy": 1,
+                "updatedBy": null,
+                "propertyWalletProject": {
+                  "id": 41,
+                  "projectName": "Ahmed Usman"
+                }
+              }
+            },
+            "propertyWalletProduct": null
+          },
+          "leadInventory": [
+            {
+              "id": 155,
+              "leadId": 133,
+              "propertyWalletInventoryPlotId": 87,
+              "propertyWalletProductId": null,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T10:25:21.834Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T10:25:21.834Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": {
+            "id": 124,
+            "propertyWalletInventoryFinalizeSale": {
+              "id": 107,
+              "cnic": "2134964346446"
+            }
+          },
+          "propertyWalletProductSaleQuotation": null
+        },
+        {
+          "id": 132,
+          "createdBy": 3,
+          "createdByUser": {
+            "id": 3,
+            "profile": {
+              "id": 3,
+              "fullName": "Kamal",
+              "agency": {
+                "id": 3,
+                "agencyName": "Moon estate agent"
+              }
+            }
+          },
+          "client": {
+            "id": 132,
+            "name": "raghle",
+            "email": null,
+            "phone": "+923215464661",
+            "otpCode": null,
+            "createdBy": 3,
+            "createdAt": "2023-08-04T07:44:48.734Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T07:44:48.734Z"
+          },
+          "leadInventoryOne": {
+            "id": 154,
+            "propertyWalletInventoryPlot": {
+              "id": 106,
+              "propertyWalletInventory": {
+                "id": 59,
+                "propertyWalletProjectId": 42,
+                "projectTypeId": 1,
+                "projectSubTypeId": 5,
+                "landSize": "240",
+                "landAreaId": 3,
+                "description": "Hello Description",
+                "price": "1000",
+                "noOfUnit": 4,
+                "noOfSold": 0,
+                "inventoryStatus": "COMPLETED",
+                "createdAt": "2023-08-03T11:32:47.976Z",
+                "updatedAt": "2023-08-04T07:31:57.313Z",
+                "deletedAt": null,
+                "createdBy": 1,
+                "updatedBy": null,
+                "propertyWalletProject": {
+                  "id": 42,
+                  "projectName": "Ahmed uzair`"
+                }
+              }
+            },
+            "propertyWalletProduct": null
+          },
+          "leadInventory": [
+            {
+              "id": 154,
+              "leadId": 132,
+              "propertyWalletInventoryPlotId": 106,
+              "propertyWalletProductId": null,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T07:44:48.734Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T07:44:48.734Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": {
+            "id": 123,
+            "propertyWalletInventoryFinalizeSale": {
+              "id": 106,
+              "cnic": "3124564616446"
+            }
+          },
+          "propertyWalletProductSaleQuotation": null
+        },
+        {
+          "id": 131,
+          "createdBy": 3,
+          "createdByUser": {
+            "id": 3,
+            "profile": {
+              "id": 3,
+              "fullName": "Kamal",
+              "agency": {
+                "id": 3,
+                "agencyName": "Moon estate agent"
+              }
+            }
+          },
+          "client": {
+            "id": 131,
+            "name": "muaaz khan",
+            "email": null,
+            "phone": "+923215466113",
+            "otpCode": null,
+            "createdBy": 3,
+            "createdAt": "2023-08-04T07:01:22.619Z",
+            "deletedAt": null,
+            "updatedBy": null,
+            "updatedAt": "2023-08-04T07:01:22.619Z"
+          },
+          "leadInventoryOne": {
+            "id": 153,
+            "propertyWalletInventoryPlot": {
+              "id": 17,
+              "propertyWalletInventory": {
+                "id": 2,
+                "propertyWalletProjectId": 2,
+                "projectTypeId": 1,
+                "projectSubTypeId": 1,
+                "landSize": "14",
+                "landAreaId": 4,
+                "description": "Project for development use case only for Ahmed Usman",
+                "price": "6022000",
+                "noOfUnit": 20,
+                "noOfSold": 8,
+                "inventoryStatus": "COMPLETED",
+                "createdAt": "2023-07-20T10:21:28.823Z",
+                "updatedAt": "2023-08-02T10:11:51.975Z",
+                "deletedAt": null,
+                "createdBy": 1,
+                "updatedBy": null,
+                "propertyWalletProject": {
+                  "id": 2,
+                  "projectName": "Ahmed Town"
+                }
+              }
+            },
+            "propertyWalletProduct": null
+          },
+          "leadInventory": [
+            {
+              "id": 153,
+              "leadId": 131,
+              "propertyWalletInventoryPlotId": 17,
+              "propertyWalletProductId": null,
+              "inventoryId": null,
+              "status": "Interested",
+              "createdBy": null,
+              "createdAt": "2023-08-04T07:01:22.619Z",
+              "deletedAt": null,
+              "updatedBy": null,
+              "updatedAt": "2023-08-04T07:01:22.619Z"
+            }
+          ],
+          "propertyWalletInventorySaleQuotation": null,
+          "propertyWalletProductSaleQuotation": {
+            "id": 22,
+            "propertyWalletProductFinalizeSale": null
+          }
+        }
+      ],
+      "meta": {
+        "totalItems": 108,
+        "itemCount": 11,
+        "itemsPerPage": 11,
+        "totalPages": 10,
+        "currentPage": 1
+      }
+    }
+  }
