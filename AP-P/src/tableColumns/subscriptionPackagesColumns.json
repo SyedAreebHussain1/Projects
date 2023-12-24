@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Package Name",
+        "dataIndex": "packageName",
+        "key": "packageName",
+        "align": ""
+    },
+    {
+        "title": "Charges",
+        "dataIndex": "charges",
+        "align": "",
+        "key": "charges"
+    },
+    {
+        "title": "User Limits",
+        "dataIndex": "userLimits",
+        "align": "",
+        "key": "userLimits"
+    },
+    {
+        "title": "No Of Listings",
+        "dataIndex": "noOfListings",
+        "align": "",
+        "key": "noOfListings"
+    },
+    {
+        "title": "Hot Listings",
+        "dataIndex": "hotListings",
+        "align": "",
+        "key": "hotListings"
+    },
+    {
+        "title": "Recurring Commission",
+        "dataIndex": "recurringCommission",
+        "align": "",
+        "key": "recurringCommission"
+    },
+    {
+        "title": "First month Commission",
+        "dataIndex": "firstMonthCommission",
+        "align": "",
+        "key": "firstMonthCommission"
+    },
+    {
+        "title": "No of months for RC",
+        "dataIndex": "noOfMonthsForRC",
+        "align": "",
+        "key": "noOfMonthsForRC"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "align": "",
+        "key": "action"
+    }
+]

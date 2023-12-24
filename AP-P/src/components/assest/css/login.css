@@ -1,0 +1,133 @@
+.bold {
+  font-weight: bold !important;
+}
+
+.input-container {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  width: 80%;
+  border-radius: 9px;
+  background-color: #f9fafb;
+  /* border: 1px solid #D0D5DD; */
+}
+
+.icon {
+  padding: 10px;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0px;
+  outline: none;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background: transparent;
+}
+
+.input-field:focus {
+  outline: none !important;
+  border-top-style: hidden !important;
+  border-right-style: hidden !important;
+  border-left-style: hidden !important;
+  border-bottom-style: hidden !important;
+}
+
+.btn-signin {
+  background-color: #27a3a3 !important;
+  border-radius: 8px !important;
+  padding: 15px 20px !important;
+  border: none !important;
+  cursor: pointer !important;
+  opacity: 0.9 !important;
+  line-height: 27px !important;
+  /* margin-top: 6%; */
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.btn-signin:hover {
+  opacity: 1;
+}
+
+.btn-signin-div {
+  /* margin-top: 6%; */
+}
+
+.flex-block {
+  display: flex;
+}
+
+.login-colum-one {
+  width: 100%;
+  /* padding: 10px; */
+}
+
+.login-colum-two {
+  width: 100% !important;
+  background: #27a3a3 !important;
+}
+
+.remember-me {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.Effortlessly {
+  font-weight: bold;
+  color: #2b2b2b;
+  font-size: 1.9rem;
+}
+
+.started {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2b2b2b;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.welcome {
+  height: 24px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #667085;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.input-lable {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #667085;
+  margin-bottom: 4px;
+}
+
+@media screen and (max-width: 900px) {
+  .flex-block {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {}
+
+/* login */

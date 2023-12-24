@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Agent Name",
+        "dataIndex": "agentName",
+        "key": "agentName",
+        "align": ""
+    },
+    {
+        "title": "Client Name",
+        "dataIndex": "clientName",
+        "align": "",
+        "key": "clientName"
+    },
+    {
+        "title": "Project Name",
+        "dataIndex": "projectName",
+        "align": "",
+        "key": "projectName"
+    },
+    {
+        "title": "Attendant Name",
+        "dataIndex": "attendantName",
+        "align": "",
+        "key": "attendantName"
+    },
+    {
+        "title": "Date",
+        "dataIndex": "date",
+        "align": "",
+        "key": "date"
+    }
+]

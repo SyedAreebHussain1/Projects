@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Project Name",
+        "dataIndex": "projectName",
+        "key": "projectName"
+    },
+    {
+        "title": "Description",
+        "dataIndex": "description",
+        "key": "description"
+    },
+    {
+        "title": "Address",
+        "dataIndex": "address",
+        "key": "address"
+    },
+    {
+        "title": "City",
+        "dataIndex": "city",
+        "key": "city"
+    },
+    {
+        "title": "Builder Name",
+        "dataIndex": "builderName",
+        "key": "builderName"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "key": "action"
+    }
+]

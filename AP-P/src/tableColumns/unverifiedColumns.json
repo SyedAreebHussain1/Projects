@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Name",
+        "dataIndex": "name",
+        "key": "name"
+    },
+    {
+        "title": "Phone No",
+        "dataIndex": "phoneNo",
+        "key": "phoneNo"
+    },
+    {
+        "title": "Email",
+        "dataIndex": "email",
+        "key": "email"
+    },
+    {
+        "title": "Verification Code",
+        "dataIndex": "verificationCode",
+        "key": "verificationCode"
+    },
+    {
+        "title": "Agency",
+        "dataIndex": "agency",
+        "key": "agency"
+    },
+    {
+        "title": "Joining Date",
+        "dataIndex": "joiningDate",
+        "key": "joiningDate"
+    },
+    {
+        "title": "Joining Time",
+        "dataIndex": "joiningTime",
+        "key": "joiningTime"
+    }
+]

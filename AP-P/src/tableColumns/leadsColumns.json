@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Product",
+        "dataIndex": "product",
+        "key": "product"
+    },
+    {
+        "title": "Agency",
+        "dataIndex": "agency",
+        "key": "agency"
+    },
+    {
+        "title": "Project Name",
+        "dataIndex": "projectName",
+        "key": "projectName"
+    },
+    {
+        "title": "Lead Name",
+        "dataIndex": "leadName",
+        "key": "leadName"
+    },
+    {
+        "title": "CNIC",
+        "dataIndex": "cnic",
+        "key": "cnic"
+    },
+    {
+        "title": "Phone No",
+        "dataIndex": "phoneNo",
+        "key": "phoneNo"
+    },
+    {
+        "title": "Added By",
+        "dataIndex": "addedBy",
+        "key": "addedBy"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "key": "action"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Name",
+        "dataIndex": "name",
+        "key": "name"
+    },
+    {
+        "title": "Status",
+        "dataIndex": "status",
+        "key": "status"
+    },
+    {
+        "title": "Phone No",
+        "dataIndex": "phoneNo",
+        "key": "phoneNo"
+    },
+    {
+        "title": "Email",
+        "dataIndex": "email",
+        "key": "email"
+    },
+    {
+        "title": "Designation",
+        "dataIndex": "designation",
+        "key": "designation"
+    },
+    {
+        "title": "Agency Name",
+        "dataIndex": "agencyName",
+        "key": "agencyName"
+    },
+    {
+        "title": "Agency Location",
+        "dataIndex": "agencyLocation",
+        "key": "agencyLocation"
+    },
+    {
+        "title": "Referrals",
+        "dataIndex": "referrals",
+        "key": "referrals"
+    },
+    {
+        "title": "Joining Date",
+        "dataIndex": "joiningDate",
+        "key": "joiningDate"
+    },
+    {
+        "title": "Joining Time",
+        "dataIndex": "joiningTime",
+        "key": "joiningTime"
+    }
+]

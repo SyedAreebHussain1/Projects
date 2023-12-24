@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Name",
+        "dataIndex": "name",
+        "key": "name",
+        "align": ""
+    },
+    {
+        "title": "Phone",
+        "dataIndex": "phone",
+        "align": "",
+        "key": "phone"
+    },
+    {
+        "title": "Email",
+        "dataIndex": "email",
+        "align": "",
+        "key": "email"
+    },
+    {
+        "title": "Date",
+        "dataIndex": "date",
+        "align": "",
+        "key": "date"
+    },
+    {
+        "title": "Role",
+        "dataIndex": "role",
+        "align": "",
+        "key": "role"
+    },
+    {
+        "title": "Project",
+        "dataIndex": "project",
+        "align": "",
+        "key": "project"
+    },
+    {
+        "title": "Status",
+        "dataIndex": "status",
+        "align": "",
+        "key": "status"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "align": "",
+        "key": "action"
+    }
+]

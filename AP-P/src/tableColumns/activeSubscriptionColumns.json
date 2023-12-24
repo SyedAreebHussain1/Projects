@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Name",
+        "dataIndex": "name",
+        "key": "name"
+    },
+    {
+        "title": "Address",
+        "dataIndex": "address",
+        "key": "address"
+    },
+    {
+        "title": "Agency Name",
+        "dataIndex": "agencyName",
+        "key": "agencyName"
+    },
+    {
+        "title": "Packages",
+        "dataIndex": "packages",
+        "key": "packages"
+    },
+    {
+        "title": "Billings",
+        "dataIndex": "billings",
+        "key": "billings"
+    },
+    {
+        "title": "Subscribers Date",
+        "dataIndex": "subscribersDate",
+        "key": "subscribersDate"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "key": "action"
+    }
+]

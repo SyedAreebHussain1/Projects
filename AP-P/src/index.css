@@ -1,0 +1,352 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Poppins' !important;
+}
+
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  font-family: 'Poppins';
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* country code input filed css  start*/
+:where(.css-dev-only-do-not-override-w8mnev).ant-select-single:not(.ant-select-customize-input) .ant-select-selector::after {
+  line-height: 32px !important;
+}
+
+:where(.css-dev-only-do-not-override-w8mnev).ant-input-group>.ant-input:last-child,
+:where(.css-dev-only-do-not-override-w8mnev).ant-input-group .ant-input-group-addon:last-child {
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+  line-height: 32px !important;
+}
+
+.ant-input-group-addon:last-child {
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+  line-height: 32px !important;
+}
+
+/* country code input filed css  end*/
+.bold {
+  font-weight: bold;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.ant-menu-item-selected {
+  background-color: #66708514 !important;
+  color: #000000de !important;
+}
+
+li.ant-menu-item.ant-menu-item-only-child {
+  color: #89969f;
+}
+
+.ant-menu-submenu-title {
+  color: #292d35 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active div {
+  color: #3d4350 !important;
+}
+
+.ant-tabs-tab div {
+  color: #a3a9b6;
+}
+
+.ant-tabs-ink-bar.ant-tabs-ink-bar-animated {
+  background-color: #3d4350;
+}
+
+.ant-select .ant-select-selector {
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 31px; */
+}
+
+.my-select-container .ant-select-selection-placeholder {
+  color: #667085 !important;
+}
+
+.map-animation {
+  position: relative;
+  /* margin-top: 130px; */
+  /* width: 60%; */
+  height: 300px;
+  /* padding: 10px; */
+  /* background: #27a3a3; */
+  margin-left: 0px;
+  border-top-right-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
+  animation-name: example1;
+  animation-duration: 6s;
+}
+
+@keyframes example1 {
+  0% {
+    /* background-color: #27a3a3; */
+    left: -200px;
+    top: 0px;
+  }
+
+  25% {
+    /* background-color: #27a3a3; */
+    left: 0px;
+    top: 0px;
+  }
+
+  /* 50%  {background-color:blue; left:200px; top:200px;} */
+  /* 75% {
+      background-color: #27a3a3;
+      left: 0px;
+      top: 200px;
+  } */
+
+  100% {
+    /* background-color: #27a3a3; */
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.ant-select-selection-placeholder {
+  color: #667085 !important;
+}
+
+.my-select-container .ant-select .ant-select-selector {
+  border-radius: 31px;
+}
+
+.ant-drawer-title {
+  color: #5b5b5b !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+
+.ant-slider-handle .ant-slider-handle-2 {
+  /* background-color: red; */
+}
+
+.ant-slider .ant-slider-handle::after {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #27a3a3;
+  box-shadow: 0 0 0 2px #27a3a3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: inset-inline-start 0.2s, inset-block-start 0.2s, width 0.2s,
+    height 0.2s, box-shadow 0.2s;
+}
+
+.ant-slider .ant-slider-handle:active::after,
+.ant-slider .ant-slider-handle:focus::after {
+  box-shadow: 0 0 0 2px #27a3a3;
+  width: 12px;
+  height: 12px;
+  inset-inline-start: -1px;
+  inset-block-start: -1px;
+}
+
+.ant-input-suffix {
+  color: #667085;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ant-radio-checked .ant-radio-inner {
+  /* border-color: #27A3A3 !important ; */
+}
+
+.ant-radio-checked .ant-radio-inner:after {
+  /* background-color: #27A3A3 !important; */
+}
+
+.ant-radio:hover .ant-radio-inner {
+  /* border-color: #27A3A3 !important; */
+}
+
+.btn-primary.ant-btn,
+.btn-primary-1.ant-btn {
+  transition: all 0.5s ease;
+}
+
+.btn-primary.ant-btn:hover {
+  color: #fff !important;
+  outline: none !important;
+  border-color: inherit !important;
+  opacity: 0.9;
+}
+
+.btn-primary-1.ant-btn:hover {
+  color: #000 !important;
+  outline: none !important;
+  border-color: #000 !important;
+  opacity: 0.9;
+}
+
+/* check */
+
+.input[type='checkbox'] {
+  /* visibility: hidden; */
+  accent-color: #27a3a3;
+}
+
+li.ant-pagination-prev.ant-pagination-disabled {
+  display: none;
+}
+
+li.ant-pagination-item.ant-pagination-item-1.ant-pagination-item-active {
+  display: none;
+}
+
+li.ant-pagination-next.ant-pagination-disabled {
+  display: none;
+}
+
+li.ant-pagination-total-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100% !important;
+}
+
+th.ant-table-cell {
+  background: rgba(102, 112, 133, 0.04) !important;
+  color: #667085 !important;
+  font-size: 12px;
+  padding: 10px 24px !important;
+}
+
+tbody.ant-table-tbody td.ant-table-cell {
+  color: #444b54;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+li.ant-pagination-item {
+  display: none !important;
+}
+
+.ant-popover-inner {
+  width: 220px;
+}
+
+.checkbox-custom {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.checkbox-custom:checked::before {
+  content: '\2714';
+  display: block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 14px;
+  background-color: #147ad6;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid #147ad6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 10px;
+}
+
+.file-container-pdf .file-container-pdf-delete {
+  transition: all ease-in-out 0.5s;
+  width: 0px;
+}
+
+.file-container-pdf:hover .file-container-pdf-delete {
+  transition: all ease-in-out 0.5s;
+  width: 60px;
+}
+
+.custom-checkbox span.ant-checkbox-inner {
+  border-radius: 50%;
+}
+
+.ant-checkbox-checked span.ant-checkbox-inner {
+  background-color: #27a3a3 !important;
+  border-color: #27a3a3 !important;
+}
+
+li.ant-pagination-next {
+  display: none !important;
+}
+
+li.ant-pagination-jump-next.ant-pagination-jump-next-custom-icon {
+  display: none;
+}
+
+li.ant-pagination-options {
+  display: none !important;
+}
+
+span.ant-select-selection-item {
+  display: flex;
+}
+
+.brightness-4 {
+  filter: brightness(4) !important;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+  background-color: #f0f1f3 !important;
+  color: #3d4350 !important;
+  box-shadow: none !important;
+}
+
+.ant-btnn:hover,
+.ant-btnn:focus {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-color: inherit !important;
+}
+
+.d-print-block {
+  display: none;
+}
+
+@page {
+  size: A4 !important;
+}
+
+@media print {
+  .d-print-block {
+    display: block;
+  }
+}

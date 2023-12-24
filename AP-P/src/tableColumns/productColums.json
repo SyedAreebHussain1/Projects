@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Client Name",
+        "dataIndex": "clientName",
+        "key": "clientName",
+        "align": ""
+    },
+    {
+        "title": "Phone No",
+        "dataIndex": "phoneNo",
+        "align": "",
+        "key": "phoneNo"
+    },
+    {
+        "title": "Property Name",
+        "dataIndex": "propertyName",
+        "align": "",
+        "key": "propertyName"
+    },
+    {
+        "title": "Deal Type",
+        "dataIndex": "dealType",
+        "align": "",
+        "key": "dealType"
+    },
+    {
+        "title": "Payment",
+        "dataIndex": "payment",
+        "align": "",
+        "key": "payment"
+    },
+    {
+        "title": "Date",
+        "dataIndex": "date",
+        "align": "",
+        "key": "date"
+    },
+    {
+        "title": "Amount",
+        "dataIndex": "amount",
+        "align": "",
+        "key": "amount"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "align": "",
+        "key": "action"
+    }
+]

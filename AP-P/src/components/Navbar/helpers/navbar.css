@@ -1,0 +1,382 @@
+.bold {
+    font-weight: bold;
+}
+
+.flex-block {
+    display: flex;
+}
+
+.headind {
+    color: #2b2b2b;
+}
+
+.input_backgrond {
+    background-color: rgba(102, 112, 133, 0.04);
+}
+
+.font_size_1rem {
+    font-size: 1rem;
+}
+
+.font_size_09rem {
+    font-size: 0.9rem;
+}
+
+.pera {
+    color: #667085;
+}
+
+/* search */
+.m-l-5 {
+    margin-left: 5%;
+}
+
+.align-items-end {
+    align-items: end;
+}
+
+.w-100 {
+    width: 130%;
+}
+
+#input-nav {
+    padding: 10px;
+    background-color: rgba(102, 112, 133, 0.04);
+    /* Light Border */
+    border: 1px solid rgba(102, 112, 133, 0.09);
+    border-radius: 55px;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    /* width: 150%; */
+}
+
+.no-outline {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background: transparent;
+}
+
+/* switch */
+.button-box {
+    /* width: 22px; */
+    /* margin: 35px auto; */
+    position: relative;
+    border-radius: 30px;
+    background: #fff;
+}
+
+.toggle-btn {
+    /* padding: 10px 20px; */
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    text-align: center;
+}
+
+#btn {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #6a635e;
+    border-radius: 30px;
+    transition: -5%;
+}
+
+/* switch */
+
+/* search */
+.no-outline:focus {
+    outline: none;
+}
+
+/* icon */
+.icon-div {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    padding: 12px;
+    gap: 10px;
+    width: 41px;
+    height: 41px;
+    background: rgba(102, 112, 133, 0.05);
+    border-radius: 23px;
+    flex: none;
+    order: 1;
+    margin: 5px;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.icon-div-admin {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    padding: 4px;
+    gap: 10px;
+    width: 40px;
+    height: 40px;
+    background: rgba(102, 112, 133, 0.05);
+    border-radius: 23px;
+    flex: none;
+    order: 1;
+    cursor: pointer;
+    margin: 5px;
+    flex-grow: 0;
+}
+
+/* icon */
+
+/* switch btn */
+/* GENERAL */
+
+/* Main Circle */
+
+/* Phone */
+.phone {
+    position: relative;
+    z-index: 2;
+    width: 21rem;
+    height: 45rem;
+    background-color: inherit;
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.swipe {
+    width: 40%;
+    height: 0.25rem;
+    background-color: black;
+    opacity: 0.15;
+    border-radius: 10px;
+    margin: 0.5rem auto;
+}
+
+/* Top */
+.menu {
+    /*   background-color: blue; */
+    font-size: 80%;
+    opacity: 0.4;
+    padding: 0.8rem 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.battery {
+    width: 0.85rem;
+    height: 0.45rem;
+    background-color: black;
+}
+
+.network {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6.8px 7.2px 6.8px;
+    border-color: transparent transparent black transparent;
+    transform: rotate(135deg);
+    margin: 0.12rem 0.5rem;
+}
+
+/* main row colum */
+.column_main_nav {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.row_main_nav:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 759px) {
+    .column_main_nav {
+        width: 100%;
+    }
+
+    .m-l-5 {
+        margin-left: 0%;
+    }
+
+    .flex-block {
+        display: block;
+    }
+
+    .w-100 {
+        width: 100%;
+    }
+
+    .align-items-end {
+        align-items: start;
+    }
+
+    .icon-div {
+        /* padding: 12px; */
+        /* gap: 10px; */
+        width: 48px;
+        height: 48px;
+        background: rgba(102, 112, 133, 0.05);
+        border-radius: 23px;
+        flex: none;
+        order: 1;
+        /* flex-grow: 0; */
+        margin: 5px;
+    }
+
+    #example1 {
+        width: 100%;
+    }
+
+    #input-nav {
+        width: 100%;
+    }
+}
+
+.cplus {
+    background: #464646;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* height: 100vh; */
+    flex-direction: column;
+}
+
+.switch {
+    position: relative;
+    width: 180px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+.switch input {
+    appearance: none;
+    width: 180px;
+    height: 45px;
+    border-radius: 25px;
+    /* background: #1e1e1e; */
+    outline: none;
+}
+
+.switch input::before,
+.switch input::after {
+    font-family: 'Poppins';
+    font-style: normal;
+    z-index: 2;
+    position: absolute;
+    top: 56%;
+    transform: translateY(-50%);
+    font-weight: bolder;
+    /* color: #fff; */
+}
+
+.switch input::before {
+    content: 'SELL';
+    left: 20px;
+}
+
+.switch input::after {
+    content: 'RENT';
+    right: 20px;
+}
+
+.switch input:checked {
+    /* border: 2px solid red; */
+    border: 1px solid rgba(102, 112, 133, 0.09);
+
+    background: #ecedf1;
+    /* background-color: rgba(102, 112, 133, 0.04); */
+}
+
+.switch label {
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    bottom: 4px;
+    border-radius: 20px;
+}
+
+.switch input {
+    transition: 0.25s;
+}
+
+.switch input:checked::after,
+.switch input:checked::before {
+    font-family: 'Poppins';
+    font-style: normal;
+    color: #2b2b2b;
+    transition: color 0.5s;
+}
+
+.switch input:checked+label {
+    /* border: 2px solid blue; */
+    left: 10px;
+    right: 100px;
+    background: #27a3a3;
+    transition: left 0.5s, right 0.4s 0.2s;
+    /* color: #fff !important; */
+}
+
+.switch input:not(:checked) {
+    background: #ecedf1;
+    border: 1px solid rgba(102, 112, 133, 0.09);
+    transition: background 0.4s;
+}
+
+.switch input:not(:checked)::before {
+    border: 1px solid rgba(102, 112, 133, 0.09);
+    transition: color 0.5s;
+}
+
+.switch input:not(:checked)::after {
+    /* background: #27a3a3; */
+    transition: color 0.5s 0.2s;
+}
+
+.switch input:not(:checked)+label {
+    left: 100px;
+    right: 10px;
+    background: #27a3a3;
+    transition: left 0.4s 0.2s, right 0.5s, background 0.35s;
+}
+
+.switch input:not(:checked)::after {
+    color: #fff;
+}
+
+.switch input:checked::after {
+    /* border: 2px solid blue; */
+    color: #000;
+}
+
+.switch input:not(:checked)::before {
+    color: #000;
+}
+
+.switch input:checked::before {
+    /* border: 2px solid blue; */
+    color: #fff;
+}
+
+.switch-left {
+    left: 0;
+}
+
+.switch-right {
+    right: 0;
+}

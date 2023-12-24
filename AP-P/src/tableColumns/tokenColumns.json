@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Inventory",
+        "dataIndex": "inventory",
+        "key": "inventory",
+        "align": "",
+        "width": 220
+    },
+    {
+        "title": "Project Name",
+        "dataIndex": "projectName",
+        "align": "center",
+        "key": "projectName"
+    },
+    {
+        "title": "Agent Name",
+        "dataIndex": "agentName",
+        "align": "center",
+        "key": "agentName"
+    },
+    {
+        "title": "Property Size",
+        "dataIndex": "propertySize",
+        "align": "center",
+        "key": "propertySize"
+    },
+    {
+        "title": "Inventory Price",
+        "dataIndex": "InventoryPrice",
+        "align": "center",
+        "key": "Inventory Price"
+    },
+    {
+        "title": "Token Amount",
+        "dataIndex": "TokenAmount",
+        "align": "center",
+        "key": "TokenAmount"
+    },
+    {
+        "title": "Status",
+        "dataIndex": "Status",
+        "align": "center",
+        "key": "Status"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "align": "center",
+        "key": "action"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Discount Code",
+        "dataIndex": "discountCode",
+        "key": "discountCode"
+    },
+    {
+        "title": "Discount Percentage",
+        "dataIndex": "discountPercentage",
+        "key": "discountPercentage"
+    },
+    {
+        "title": "Discount Usage",
+        "dataIndex": "discountUsage",
+        "key": "discountUsage"
+    },
+    {
+        "title": "Start Date",
+        "dataIndex": "startDate",
+        "key": "startDate"
+    },
+    {
+        "title": "Expire Date",
+        "dataIndex": "expiresDate",
+        "key": "expiresDate"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "key": "action"
+    }
+]
