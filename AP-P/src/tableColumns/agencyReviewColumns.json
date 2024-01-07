@@ -1,0 +1,32 @@
+[
+    {
+        "title": "S NO.",
+        "dataIndex": "sno",
+        "key": "sno"
+    },
+    {
+        "title": "Name",
+        "dataIndex": "name",
+        "key": "name"
+    },
+    {
+        "title": "Comment",
+        "dataIndex": "comment",
+        "key": "comment"
+    },
+    {
+        "title": "Phone",
+        "dataIndex": "phone",
+        "key": "phone"
+    },
+    {
+        "title": "Email",
+        "dataIndex": "email",
+        "key": "email"
+    },
+    {
+        "title": "Rate",
+        "dataIndex": "rate",
+        "key": "rate"
+    }
+]

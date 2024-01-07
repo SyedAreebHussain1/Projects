@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Name",
+        "dataIndex": "name",
+        "key": "name",
+        "align": ""
+    },
+    {
+        "title": "CNIC",
+        "dataIndex": "cnic",
+        "align": "",
+        "key": "cnic"
+    },
+    {
+        "title": "Email",
+        "dataIndex": "email",
+        "align": "",
+        "key": "email"
+    },
+    {
+        "title": "Agency Name",
+        "dataIndex": "agencyName",
+        "align": "",
+        "key": "agencyName"
+    },
+    {
+        "title": "Total Investor",
+        "dataIndex": "totalInvestor",
+        "align": "",
+        "key": "totalInvestor"
+    },
+    {
+        "title": "Percentage",
+        "dataIndex": "percentage",
+        "align": "",
+        "key": "percentage"
+    }
+]

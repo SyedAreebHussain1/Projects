@@ -1,0 +1,37 @@
+[
+    {
+        "title": "S NO.",
+        "dataIndex": "sno",
+        "key": "sno"
+    },
+    {
+        "title": "Agency Name",
+        "dataIndex": "agencyName",
+        "key": "agencyName"
+    },
+    {
+        "title": "Agency Code",
+        "dataIndex": "agencyCode",
+        "key": "agencyCode"
+    },
+    {
+        "title": "City",
+        "dataIndex": "city",
+        "key": "city"
+    },
+    {
+        "title": "Country",
+        "dataIndex": "country",
+        "key": "country"
+    },
+    {
+        "title": "Address",
+        "dataIndex": "address",
+        "key": "address"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "key": "action"
+    }
+]

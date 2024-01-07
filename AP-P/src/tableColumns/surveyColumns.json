@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Project Name",
+        "dataIndex": "projectName",
+        "align": "center",
+        "key": "projectName"
+    },
+    {
+        "title": "Project Size",
+        "dataIndex": "projectSize",
+        "align": "center",
+        "key": "projectSize"
+    },
+    {
+        "title": "Project Category",
+        "dataIndex": "projectCategory",
+        "align": "center",
+        "key": "projectCategory"
+    },
+    {
+        "title": "Project Complete Time",
+        "dataIndex": "projectCompleteTime",
+        "align": "center",
+        "key": "projectCompleteTime"
+    },
+    {
+        "title": "Location",
+        "dataIndex": "location",
+        "align": "center",
+        "key": "location"
+    },
+    {
+        "title": "Date",
+        "dataIndex": "date",
+        "align": "center",
+        "key": "date"
+    },
+    {
+        "title": "Action",
+        "dataIndex": "action",
+        "align": "center",
+        "key": "action"
+    }
+]

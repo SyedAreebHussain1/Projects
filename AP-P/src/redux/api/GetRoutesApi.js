@@ -26,6 +26,9 @@ import PackagesPage from '../../Pages/SubscriptionManagement/PackagesPage'
 import ProjectCoordinatorPage from '../../Pages/ProjectCoordinator/ProjectCoordinatorPage'
 import CoViewProjectPage from '../../Pages/ProjectCoordinator/CoViewProjectPage'
 import LogsPage from '../../Pages/ProjectCoordinator/LogsPage'
+import SurveyPage from '../../Pages/Survey/SurveyPage'
+import AgencyPage from '../../Pages/Agency/AgencyPage'
+import AgencyReviewPage from '../../Pages/Agency/AgencyReviewPage'
 
 
 // icons 
@@ -37,6 +40,8 @@ import UserDetailPage from '../../Pages/AppUsers/UserDetailPage'
 import setting from '../../components/assest/icon/dashboard-icon/0.1.png'
 import supportIcon from '../../components/assest/icon/supporticon.png'
 import subscriptionIcon from '../../components/assest/icon/subs.png'
+import OwnersPage from '../../Pages/SmartSellingPoint/OwnersPage'
+import InvestorsPage from '../../Pages/SmartSellingPoint/InvestorsPage'
 
 
 function getComponentByRoute(route) {
@@ -55,6 +60,10 @@ function getComponentByRoute(route) {
         "subscription-management/addons": <AddonsPage />,
         "subscription-management/active-subscription": <ActiveSubscriptionPage />,
         "project-coodinator": <ProjectCoordinatorPage />,
+        "survay": <SurveyPage />,
+        "sales-service-point/owners": <OwnersPage />,
+        "sales-service-point/investors": <InvestorsPage />,
+        "agency": <AgencyPage />,
     }
     return components[route]
 }
@@ -84,11 +93,17 @@ export async function getRoutesApi(dispatch) {
                     value: 'project-coodinator/project-detail/:id/logs/:logId',
                     component: <LogsPage />,
                 },
+                {
+                    key: 'url4',
+                    value: 'agency/:id',
+                    component: <AgencyReviewPage />,
+                },
             ]
         }
         let { data } = await getRequest(API.roles.getRoutes)
         data?.data?.result?.map((module) => {
             for (let key in module) {
+                // console.log(module);
                 if (key === 'Dashboard') {
                     routes.items.push(
                         getItem(
@@ -110,6 +125,40 @@ export async function getRoutesApi(dispatch) {
                 if (key === "Discount Code") {
                     routes.items.push(
                         getItem("Discount Code",
+                            convertToKebabCase(key),
+                            <img src={dashboardIcon} alt="" />
+                        )
+                    )
+                    routes.routes.push(
+                        ...module[key].map((mod) => ({
+                            key: `${convertToKebabCase(mod.label)}`,
+                            value: `${convertToKebabCase(mod.label)}`,
+                            component: getComponentByRoute(
+                                `${convertToKebabCase(mod.label)}`
+                            ),
+                        }))
+                    )
+                }
+                if (key === "Agency") {
+                    routes.items.push(
+                        getItem("Agency",
+                            convertToKebabCase(key),
+                            <img src={dashboardIcon} alt="" />
+                        )
+                    )
+                    routes.routes.push(
+                        ...module[key].map((mod) => ({
+                            key: `${convertToKebabCase(mod.label)}`,
+                            value: `${convertToKebabCase(mod.label)}`,
+                            component: getComponentByRoute(
+                                `${convertToKebabCase(mod.label)}`
+                            ),
+                        }))
+                    )
+                }
+                if (key === "Survay") {
+                    routes.items.push(
+                        getItem("Survay",
                             convertToKebabCase(key),
                             <img src={dashboardIcon} alt="" />
                         )
@@ -192,7 +241,24 @@ export async function getRoutesApi(dispatch) {
                         }))
                     )
                 }
-
+                if (key === 'Sales Service Point') {
+                    routes.items.push(
+                        getItem('Sales Service Point', key, <img src={setting} alt="" />, [
+                            ...module[key].map((mod, i) =>
+                                getItem(mod.label, `sales-service-point/${convertToKebabCase(mod.label)}`)
+                            ),
+                        ])
+                    )
+                    routes.routes.push(
+                        ...module[key].map((mod) => ({
+                            key: `sales-service-point/${convertToKebabCase(mod.label)}`,
+                            value: `sales-service-point/${convertToKebabCase(mod.label)}`,
+                            component: getComponentByRoute(
+                                `sales-service-point/${convertToKebabCase(mod.label)}`
+                            ),
+                        }))
+                    )
+                }
 
                 if (key === 'Setting') {
                     routes.items2.push(

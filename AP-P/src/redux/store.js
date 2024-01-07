@@ -38,6 +38,15 @@ import getProjectsForAssignSlice from './slices/ProjectCoordinator/getProjectsFo
 import proCooAssignProjectSlice from './slices/ProjectCoordinator/proCooAssignProjectSlice'
 import getProCooRoleListSlice from './slices/ProjectCoordinator/getProCooRoleListSlice'
 import pcSignUpSlice from './slices/ProjectCoordinator/pcSignUpSlice'
+import findAllSurveySlice from './slices/Survey/findAllSurveySlice'
+import findAllSurveyLogsSlice from './slices/Survey/findAllSurveyLogsSlice'
+import AddSurveyFormSlice from './slices/Survey/AddSurveyFormSlice'
+import editdSurveyFormSlice from './slices/Survey/editdSurveyFormSlice'
+import getAllOwnersSlice from './slices/SmartSellingPoint/Owner/getAllOwnersSlice'
+import getAllInvestorsSlice from './slices/SmartSellingPoint/Investor/getAllInvestorsSlice'
+import investorAuthSlice from './slices/SmartSellingPoint/Investor/investorAuthSlice'
+import getAllAgenciesSlice from './slices/Agency/getAllAgenciesSlice'
+import getAgencyReviewByIdSlice from './slices/Agency/getAgencyReviewByIdSlice'
 const rootSlices = combineReducers({
     auth: signinSlice,
     getRoutes: GetRoutesSlice,
@@ -78,6 +87,15 @@ const rootSlices = combineReducers({
     proCooAssignProject: proCooAssignProjectSlice,
     getProCooRoleList: getProCooRoleListSlice,
     pcSignUp: pcSignUpSlice,
+    findAllSurvey: findAllSurveySlice,
+    findAllSurveyLogs: findAllSurveyLogsSlice,
+    AddSurveyForm: AddSurveyFormSlice,
+    editdSurveyForm: editdSurveyFormSlice,
+    getAllOwners: getAllOwnersSlice,
+    getAllInvestors: getAllInvestorsSlice,
+    investorAuth: investorAuthSlice,
+    getAllAgencies: getAllAgenciesSlice,
+    getAgencyReviewById: getAgencyReviewByIdSlice,
 })
 const store = configureStore({
     middleware: (serialData) =>

@@ -70,5 +70,20 @@ export const API = {
         proCooAssignProject: "pro-coo-assign-project/proCooAssign/Project",
         getProCooRoleList: "pro-coo-auth/getProCooRoleList",
         pcSignUp: "pro-coo-auth/PcSignUp",
+    },
+    survey: {
+        findAllSurvey: "survey-form/findAllSurvey/FormAdminSide",
+        findAllSurveyLogs: "survey-form/findAllSurveyLogs/FormAdminSide",
+        AddSurveyForm: "survey-form/AddSurveyForm/AdminSide",
+        editdSurveyForm: "survey-form/editdSurveyForm/AdminSide",
+    },
+    smartSellingPoint: {
+        getAllOwners: "investorAuth/GetAllOwners",
+        getAllInvestors: "investorAuth/GetAllInvestors",
+        investorAuth: "investorAuth/SignUp",
+    },
+    agency: {
+        getAllAgencies: "agency/forAdmin/getAllAgencies",
+        getAgencyReviewById: 'agency/forAdmin/getAgencyReviewById'
     }
 }

@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Name",
+        "dataIndex": "name",
+        "key": "name",
+        "align": ""
+    },
+    {
+        "title": "CNIC",
+        "dataIndex": "cnic",
+        "align": "",
+        "key": "cnic"
+    },
+    {
+        "title": "Email",
+        "dataIndex": "email",
+        "align": "",
+        "key": "email"
+    },
+    {
+        "title": "Phone no",
+        "dataIndex": "phoneNo",
+        "align": "",
+        "key": "phoneNo"
+    }
+]

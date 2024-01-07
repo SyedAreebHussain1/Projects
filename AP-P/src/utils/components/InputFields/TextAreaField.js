@@ -15,7 +15,7 @@ const TextAreaField = ({ name, required = true }) => {
             ]}
         >
             <TextArea
-                className="rounded-[8px]  "
+                className="rounded-[8px]"
                 placeholder=""
                 autoSize={{ minRows: 3, maxRows: 5 }}
                 style={{ padding: '10px, 14px, 10px, 14px' }}
