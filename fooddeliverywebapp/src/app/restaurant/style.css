@@ -1,0 +1,41 @@
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-wrapper ul {
+    display: flex;
+}
+
+.header-wrapper ul li {
+    list-style-type: none;
+    padding: 4px;
+}
+
+.header-wrapper ul li a {
+    text-decoration: none;
+}
+
+.header-wrapper ul li button {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    background-color: #fff;
+}
+
+.input-error {
+    position: absolute;
+    padding: 8px;
+    color: red;
+    font-size: 13px;
+}

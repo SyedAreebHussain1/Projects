@@ -1,0 +1,25 @@
+.input-wrapper {
+  margin: 10px !important;
+}
+
+.input-field {
+  width: 200px !important;
+  height: 20px !important;
+}
+
+.button {
+  width: 200px !important;
+  height: 20px !important;
+}
+
+.container {
+  text-align: center !important;
+}
+
+.button-login {
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: skyblue;
+  margin: 20px;
+}
