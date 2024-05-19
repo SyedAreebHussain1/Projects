@@ -1,9 +1,10 @@
+import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
 const FoodItemList = () => {
   const id = JSON.parse(localStorage.getItem("restaurantUser"));
   const [dataSource, setDataSource] = useState();
-
+  const router = useRouter();
   const handleDelete = async (foodId) => {
     try {
       let res = await fetch(
@@ -43,7 +44,12 @@ const FoodItemList = () => {
             operations: (
               <div>
                 <button onClick={() => handleDelete(item?._id)}>Delete</button>
-                <button>Edit</button>
+                <button
+                  disabled={!item?._id}
+                  onClick={() => router.push(`dashboard/${item?._id}`)}
+                >
+                  Edit
+                </button>
               </div>
             ),
           };
