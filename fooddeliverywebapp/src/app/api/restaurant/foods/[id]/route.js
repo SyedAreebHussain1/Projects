@@ -16,3 +16,30 @@ export async function GET(req, res) {
     message: success ? "Get" : "Not GET",
   });
 }
+export async function DELETE(req, res) {
+  const id = res.params.id;
+  let success = false;
+  await mongoose.connect(connectionUrl, { useNewUrlParser: true });
+  const data = await foodSchema.deleteOne({ _id: id });
+  if (data?.deletedCount > 0) {
+    success = true;
+  }
+  return NextResponse.json({
+    result: data,
+    message: success ? "DELETE" : "NOT DELETE",
+  });
+}
+export async function PATCH(req, res) {
+  const id = res.params.id;
+  let success = false;
+  console.log(req, "=", res);
+  await mongoose.connect(connectionUrl, { useNewUrlParser: true });
+  const data = await foodSchema.updateOne({ _id: id });
+  if (data) {
+    success = true;
+  }
+  return NextResponse.json({
+    result: data,
+    message: success ? "UPDATE" : "NOT UPDATE",
+  });
+}

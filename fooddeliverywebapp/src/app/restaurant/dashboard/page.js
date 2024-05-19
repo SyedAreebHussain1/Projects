@@ -14,7 +14,11 @@ const Dashboard = () => {
       <button onClick={() => setAddItem(!addItem)}>
         {!addItem ? "Add Food" : "Dashboard"}
       </button>
-      {addItem ? <AddFoodItems /> : <FoodItemList />}
+      {addItem ? (
+        <AddFoodItems setAddItem={setAddItem} addItem={addItem} />
+      ) : (
+        <FoodItemList />
+      )}
     </div>
   );
 };

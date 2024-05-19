@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddFoodItems = () => {
+const AddFoodItems = ({ setAddItem, addItems }) => {
   const [state, setState] = useState({});
   const [error, setError] = useState(null);
   const handleChange = (event) => {
@@ -18,7 +18,7 @@ const AddFoodItems = () => {
     const restaurantId = localStorage.getItem("restaurantUser");
     const body = {
       ...state,
-      price: Number(state?.price),
+      price: state?.price,
       resto_id: JSON.parse(restaurantId)._id,
     };
     if (!body.name || !body.img_path || !body.price || !body.description) {
@@ -35,13 +35,14 @@ const AddFoodItems = () => {
       JSON.parse(restaurantId)
     ) {
       setError(false);
+
       let res = await fetch("http://localhost:3000/api/restaurant/foods", {
         method: "POST",
         body: JSON.stringify(body),
       });
       res = await res.json();
       if (res.message) {
-        alert(res?.message);
+        setAddItem(addItems);
       }
       event.target.name.value = "";
       event.target.price.value = "";
@@ -70,7 +71,7 @@ const AddFoodItems = () => {
           </div>
           <div className="input-wrapper">
             <input
-              type="text"
+              type="number"
               value={state?.price}
               name="price"
               onChange={handleChange}
