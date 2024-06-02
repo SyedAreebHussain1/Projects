@@ -7,25 +7,28 @@ export async function GET(req, res) {
   const id = res.params.id;
   let success = false;
   await mongoose.connect(connectionUrl, { useNewUrlParser: true });
-  const data = await foodSchema.find({ resto_id: id });
+  const data = await foodSchema.findOne({ _id: id });
   if (data) {
     success = true;
   }
   return NextResponse.json({
-    result: data,
-    message: success ? "Get" : "Not GET",
+    data,
+    success: success ? "GET SUCCESSFULLY" : "NOT GET",
   });
 }
-export async function DELETE(req, res) {
+
+export async function PUT(req, res) {
   const id = res.params.id;
+  const payload = await req.json();
+  // console.log("payload=>", payload);
   let success = false;
   await mongoose.connect(connectionUrl, { useNewUrlParser: true });
-  const data = await foodSchema.deleteOne({ _id: id });
-  if (data?.deletedCount > 0) {
+  const data = await foodSchema.findOneAndUpdate({ _id: id }, payload);
+  if (data) {
     success = true;
   }
   return NextResponse.json({
-    result: data,
-    message: success ? "DELETE" : "NOT DELETE",
+    data,
+    success: success ? "UPDATE SUCCESSFULLY" : "NOT WORK",
   });
 }

@@ -18,10 +18,10 @@ const EditFoodItems = ({ params }) => {
       };
     });
   };
-  const fetchData = async () => {
+  const handleLoadFoodItem = async () => {
     try {
       let res = await fetch(
-        `http://localhost:3000/api/restaurant/foods/${id._id}`,
+        `http://localhost:3000/api/restaurant/foods/edit/${params.id}`,
         {
           method: "GET",
         }
@@ -31,19 +31,16 @@ const EditFoodItems = ({ params }) => {
       }
       let data = await res.json();
       if (data) {
-        const filter = data.result.filter((item) => item._id === params?.id);
-        setState(filter[0]);
+        setState(data.data);
       }
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
   useEffect(() => {
-    if (params.id) {
-      fetchData();
-    }
-  }, [params.id]);
-
+    handleLoadFoodItem();
+  }, []);
+  // console.log(params.id);
   async function handleSubmit(event) {
     event.preventDefault();
     const restaurantId = localStorage.getItem("restaurantUser");
@@ -66,11 +63,15 @@ const EditFoodItems = ({ params }) => {
       JSON.parse(restaurantId)
     ) {
       setError(false);
+      const { _id, resto_id, __v, ...update } = body;
       try {
-        let res = await fetch("http://localhost:3000/api/restaurant/foods", {
-          method: "POST",
-          body: JSON.stringify(body),
-        });
+        let res = await fetch(
+          `http://localhost:3000/api/restaurant/foods/edit/${params.id}`,
+          {
+            method: "PUT",
+            body: JSON.stringify(update),
+          }
+        );
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
         }
