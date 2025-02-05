@@ -4,31 +4,49 @@ import { connectionUrl } from "@/app/lib/db";
 import { foodSchema } from "@/app/lib/foodsModel";
 
 export async function GET(req, res) {
-  const id = res.params.id;
-  let success = false;
-  await mongoose.connect(connectionUrl, { useNewUrlParser: true });
-  const data = await foodSchema.findOne({ _id: id });
-  if (data) {
-    success = true;
+  try {
+    const { id } = res.params;
+    let success = false;
+    await mongoose.connect(connectionUrl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    const result = await foodSchema.findOne({ _id: id });
+    if (!result) {
+      return NextResponse.json({
+        success: false,
+        message: "Data not found",
+      });
+    }
+    return NextResponse.json({
+      success: true,
+      data: result,
+    });
+  } catch (error) {
+    console.error("Error updating document:", error);
+    return NextResponse.json({ success: false, error: error.message });
   }
-  return NextResponse.json({
-    data,
-    success: success ? "GET SUCCESSFULLY" : "NOT GET",
-  });
 }
-
 export async function PUT(req, res) {
-  const id = res.params.id;
-  const payload = await req.json();
-  // console.log("payload=>", payload);
-  let success = false;
-  await mongoose.connect(connectionUrl, { useNewUrlParser: true });
-  const data = await foodSchema.findOneAndUpdate({ _id: id }, payload);
-  if (data) {
-    success = true;
+  try {
+    const { id } = res.params;
+    const payload = await req.json();
+    let success = false;
+    await mongoose.connect(connectionUrl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    // const result = await foodSchema.updateOne({ _id: id }, { $set: payload });
+    const result = await foodSchema.findOneAndUpdate({ _id: id }, payload);
+    if (result) {
+      success = true;
+    }
+    return NextResponse.json({
+      data: result,
+      message: success ? "Successfully Updated" : "Not Updated",
+    });
+  } catch (error) {
+    console.error("Error updating document:", error);
+    return NextResponse.json({ success: false, error: error.message });
   }
-  return NextResponse.json({
-    data,
-    success: success ? "UPDATE SUCCESSFULLY" : "NOT WORK",
-  });
 }

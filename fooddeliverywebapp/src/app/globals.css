@@ -1,3 +1,71 @@
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: sans-serif !important;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-wrapper ul {
+  display: flex;
+}
+
+.header-wrapper ul li {
+  list-style-type: none;
+  padding: 4px;
+}
+
+.header-wrapper ul li a {
+  text-decoration: none;
+}
+
+.header-wrapper ul li button {
+  background-color: transparent;
+  border: none;
+  color: blue;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  background-color: #fff;
+}
+
+.input-error {
+  position: absolute;
+  padding: 8px;
+  color: red;
+  font-size: 13px;
+}
+
+table, th, td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+table td button {
+  margin: 5px;
+}
+
+table img {
+  width: 80px;
+}
+
+table button {
+  margin: 5px;
+}
+
 .input-wrapper {
   margin: 10px !important;
 }
@@ -16,13 +84,6 @@
   text-align: center !important;
 }
 
-.input-error {
-  position: absolute;
-  padding: 8px;
-  color: red;
-  font-size: 13px;
-}
-
 .button-login {
   border: 0;
   cursor: pointer;
@@ -31,16 +92,83 @@
   margin: 20px;
 }
 
-table, th, td {
-  border: 1px solid #000;
-  border-collapse: collapse;
+.main-page-banner {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyZnUWk14oXn2AG3vFDrp_568dCdH7iDtoMA&s') !important;
+  background-color: rgb(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  padding: 1.875rem;
+  height: 230px;
+  color: #fff;
+  text-align: center;
+}
+
+.main-page-banner .input-wrapper {
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: auto !important;
+  width: 60%;
+}
+
+.main-page-banner .select-input {
+  height: 40px;
+  border: none;
+  padding-left: 15px;
+  width: 25%;
+}
+
+.main-page-banner .search-input {
+  height: 40px;
+  border: none;
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+  width: 45%;
+}
+
+.location-list {
+  color: #000;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid #ccc;
+}
+
+.location-list li {
+  width: 180px;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.resturant-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.resturant-wrapper {
+  width: 45%;
+  background-color: rgb(168, 157, 107);
+  margin: 10px;
   padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-table td button {
-  margin: 5px;
+.resturant-wrapper .heading-wrapper, .resturant-wrapper .address-wrapper {
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-start;
 }
 
-table img {
-  width: 80px;
+.resturant-wrapper h5 {
+  margin-left: 15px;
 }

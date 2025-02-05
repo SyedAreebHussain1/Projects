@@ -1,30 +1,19 @@
-import { useRouter } from "next/navigation";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
 const FoodItemList = () => {
-  const id = JSON.parse(localStorage.getItem("restaurantUser"));
-  const [dataSource, setDataSource] = useState();
   const router = useRouter();
-  const handleDelete = async (foodId) => {
+  const pathname = usePathname();
+  const [dataSource, setDataSource] = useState([]);
+  useEffect(() => {
+    loadFoodItem();
+  }, []);
+  const loadFoodItem = async () => {
+    const restaurantUser = JSON.parse(localStorage.getItem("restaurantUser"));
+    const resto_id = restaurantUser?._id;
     try {
       let res = await fetch(
-        `http://localhost:3000/api/restaurant/foods/${foodId}`,
-        {
-          method: "DELETE",
-        }
-      );
-      let data = await res.json();
-      if (data) {
-        fetchData();
-      }
-    } catch (error) {
-      console.error("Error: ", error);
-    }
-  };
-  const fetchData = async () => {
-    try {
-      let res = await fetch(
-        `http://localhost:3000/api/restaurant/foods/${id._id}`,
+        `http://localhost:3000/api/restaurant/foods/${resto_id}`,
         {
           method: "GET",
         }
@@ -33,71 +22,72 @@ const FoodItemList = () => {
         throw new Error(`HTTP error! Status: ${res.status}`);
       }
       let data = await res.json();
-      if (data?.result.length > 0) {
-        let dataValue = data?.result?.map((item, i) => {
-          return {
-            Sno: <span>{i + 1}</span>,
-            name: <span>{item?.name}</span>,
-            price: <span>{item.price}</span>,
-            description: <span>{item?.description}</span>,
-            image: <span>{item?.img_path}</span>,
-            operations: (
-              <div>
-                <button onClick={() => handleDelete(item?._id)}>Delete</button>
-                <button
-                  disabled={!item?._id}
-                  onClick={() => router.push(`dashboard/${item?._id}`)}
-                >
-                  Edit
-                </button>
-              </div>
-            ),
-          };
-        });
-        setDataSource(dataValue);
-      } else {
-        setDataSource([]);
-      }
+      setDataSource(data?.result);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const handleDelete = async (id) => {
+    if (id) {
+      const res = await fetch(
+        `http://localhost:3000/api/restaurant/foods/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      try {
+        const data = await res.json();
+        if (data?.success) {
+          loadFoodItem();
+        } else {
+          alert("Failed to delete");
+        }
+      } catch {
+        console.log("Error =>", err);
+      }
+    }
+  };
   return (
     <div>
-      <h3>FoodItemList</h3>
+      <h1>FoodItemList</h1>
       <table>
-        <thead>
-          <tr>
-            {[
-              "S.no",
-              "Name",
-              "Price",
-              "Description",
-              "Image",
-              "Operations",
-            ].map((item, i) => {
-              return <td key={i}>{item}</td>;
-            })}
-          </tr>
-        </thead>
-        <tbody>
-          {dataSource?.map((item) => {
+        <tr>
+          <th>S.N</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Operation</th>
+        </tr>
+        {dataSource?.length > 0 &&
+          dataSource.map((item, i) => {
             return (
-              <tr key={item?._id}>
-                <td>{item.Sno}</td>
+              <tr key={item.id}>
+                <td>{i + 1}</td>
                 <td>{item.name}</td>
                 <td>{item.price}</td>
                 <td>{item.description}</td>
-                <td>{item.image}</td>
-                <td>{item.operations}</td>
+                <td>
+                  {" "}
+                  <img src={item.img_path} />
+                </td>
+                <td>
+                  <button
+                    onClick={() => {
+                      // router.push("dashboard/" + item?._id);
+                      router.push(pathname + "/" + item?._id);
+                    }}
+                  >
+                    Edit
+                  </button>
+                  <button onClick={() => handleDelete(item?._id)}>
+                    Delete
+                  </button>
+                </td>
               </tr>
             );
           })}
-        </tbody>
       </table>
     </div>
   );

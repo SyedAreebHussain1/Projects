@@ -1,14 +1,15 @@
 "use client";
-
-import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
-const EditFoodItems = ({ params }) => {
-  const [state, setState] = useState({});
-  const id = JSON.parse(localStorage.getItem("restaurantUser"));
-  const [error, setError] = useState(null);
+const UpdateFoodItems = (props) => {
   const router = useRouter();
+  const [state, setState] = useState(null);
+  const [error, setError] = useState(null);
 
+  const handleBack = () => {
+    router.push("../dashboard");
+  };
   const handleChange = (event) => {
     const { value, name } = event?.target;
     setState((pre) => {
@@ -18,35 +19,13 @@ const EditFoodItems = ({ params }) => {
       };
     });
   };
-  const handleLoadFoodItem = async () => {
-    try {
-      let res = await fetch(
-        `http://localhost:3000/api/restaurant/foods/edit/${params.id}`,
-        {
-          method: "GET",
-        }
-      );
-      if (!res.ok) {
-        throw new Error(`HTTP error! Status: ${res.status}`);
-      }
-      let data = await res.json();
-      if (data) {
-        setState(data.data);
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-  useEffect(() => {
-    handleLoadFoodItem();
-  }, []);
-  // console.log(params.id);
+
   async function handleSubmit(event) {
     event.preventDefault();
     const restaurantId = localStorage.getItem("restaurantUser");
     const body = {
       ...state,
-      price: state?.price,
+      price: Number(state?.price),
       resto_id: JSON.parse(restaurantId)._id,
     };
     if (!body.name || !body.img_path || !body.price || !body.description) {
@@ -63,27 +42,44 @@ const EditFoodItems = ({ params }) => {
       JSON.parse(restaurantId)
     ) {
       setError(false);
-      const { _id, resto_id, __v, ...update } = body;
-      try {
-        let res = await fetch(
-          `http://localhost:3000/api/restaurant/foods/edit/${params.id}`,
-          {
-            method: "PUT",
-            body: JSON.stringify(update),
-          }
-        );
-        if (!res.ok) {
-          throw new Error(`HTTP error! Status: ${res.status}`);
+      let res = await fetch(
+        `http://localhost:3000/api/restaurant/foods/edit/${props.params.id}`,
+        {
+          method: "PUT",
+          body: JSON.stringify(body),
         }
-        let data = await res.json();
-        if (data) {
-          router.back();
-        }
-      } catch (error) {
-        console.error("Error post data:", error);
+      );
+      res = await res.json();
+      if (res.message) {
+        handleBack();
+        alert(res?.message);
       }
+      event.target.name.value = "";
+      event.target.price.value = "";
+      event.target.description.value = "";
+      event.target.img_path.value = "";
+      setState(null);
     }
   }
+
+  useEffect(() => {
+    if (props.params.id) {
+      handleGetById(props.params.id);
+    }
+  }, [props.params.id]);
+  const handleGetById = async (id) => {
+    let res = await fetch(
+      `http://localhost:3000/api/restaurant/foods/edit/${id}`,
+      {
+        method: "GET",
+      }
+    );
+    const data = await res.json();
+    if (data?.data) {
+      setState(data?.data);
+    }
+  };
+
   return (
     <div className="container">
       <h3>Update Food Item</h3>
@@ -104,7 +100,7 @@ const EditFoodItems = ({ params }) => {
           </div>
           <div className="input-wrapper">
             <input
-              type="number"
+              type="text"
               value={state?.price}
               name="price"
               onChange={handleChange}
@@ -143,12 +139,12 @@ const EditFoodItems = ({ params }) => {
           </div>
           <div className="input-wrapper">
             <button className="button" type="submit">
-              Edit food Item
+              Update food Item
             </button>
           </div>
-          <div className="input-wrapper">
-            <button className="button" onClick={() => router.back()}>
-              Back to Food Item List
+          <div>
+            <button className="button" type="reset" onClick={handleBack}>
+              Back to food item list
             </button>
           </div>
         </div>
@@ -157,4 +153,4 @@ const EditFoodItems = ({ params }) => {
   );
 };
 
-export default EditFoodItems;
+export default UpdateFoodItems;
